@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="gsap.min.js"></script>
+    <style>
+@font-face{font-family:"Inter";src:url("fonts/Inter-Regular.otf");font-weight:400}
+@font-face{font-family:"Inter";src:url("fonts/Inter-SemiBold.otf");font-weight:600}
+@font-face{font-family:"Inter";src:url("fonts/Inter-Bold.otf");font-weight:700}
+@font-face{font-family:"Inter";src:url("fonts/Inter-ExtraBold.otf");font-weight:800}
+@font-face{font-family:"Inter";src:url("fonts/Inter-Black.otf");font-weight:900}
+@font-face{font-family:"DejaVu Sans Mono";src:url("fonts/DejaVuSansMono.ttf");font-weight:400}
+@font-face{font-family:"DejaVu Sans Mono";src:url("fonts/DejaVuSansMono-Bold.ttf");font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#ece8fd}
+#root{position:relative;width:100%;height:100%;overflow:hidden;font-family:"Inter",sans-serif;color:#1e1b4b}
+.bg{position:absolute;inset:0;background:linear-gradient(160deg,#ece8fd 0%,#e3e6fb 48%,#f6e6f1 100%)}
+.brand{position:absolute;left:80px;top:236px;display:flex;align-items:center;gap:18px;z-index:20}
+.brand .ico{width:68px;height:68px;border-radius:18px;background:#5b4ce6;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(91,76,230,.3)}
+.brand .ico svg{width:40px;height:40px}
+.brand .wm{font-weight:800;font-size:46px;letter-spacing:-0.03em;color:#1e1b4b}
+.brand .wm i{font-style:normal;color:#5b4ce6}
+.foot{position:absolute;left:80px;bottom:400px;font-family:"DejaVu Sans Mono",monospace;font-size:34px;color:#1e1b4b;opacity:.7;letter-spacing:.04em;z-index:20}
+.lbl{font-family:"DejaVu Sans Mono",monospace;font-weight:700;color:#6d28d9;letter-spacing:.16em;text-transform:uppercase;font-size:34px}
+.ttl{font-weight:900;letter-spacing:-0.045em;line-height:.98;color:#1e1b4b}
+.kw{color:#5b21b6}
+.hl{background-image:linear-gradient(#c4b5fd,#c4b5fd);background-repeat:no-repeat;background-position:0 88%;background-size:100% 30%;padding:0 6px}
+
+      @font-face{font-family:"Noto Color Emoji";src:url("fonts/NotoColorEmoji.ttf")}
+      #root{font-family:"Inter","Noto Color Emoji",sans-serif}
+      .abs{position:absolute;left:80px;right:140px}
+      .chat{background:#efeae2;border-radius:44px;padding:28px 26px;display:flex;flex-direction:column;gap:18px;box-shadow:0 24px 60px rgba(30,27,75,.14)}
+      .msg{max-width:94%;padding:18px 26px 12px;font-size:42px;font-weight:600;line-height:1.18;color:#111;box-shadow:0 4px 10px rgba(0,0,0,.06)}
+      .msg small{display:block;text-align:right;font-family:"DejaVu Sans Mono",monospace;font-size:24px;color:#667;margin-top:6px;font-weight:400}
+      .in{align-self:flex-start;background:#fff;border-radius:30px 30px 30px 8px}
+      .out{align-self:flex-end;background:#d9fdd3;border-radius:30px 30px 8px 30px}
+      .btns{display:flex;gap:14px;margin-top:16px}
+      .btn{flex:1;text-align:center;background:#fff;border:4px solid #5b4ce6;color:#5b21b6;font-weight:800;font-size:38px;padding:14px 10px;border-radius:999px}
+      .cal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;position:relative}
+      .col{background:rgba(255,255,255,.75);border-radius:26px;height:200px;padding:16px;text-align:center}
+      .col .d{font-family:"DejaVu Sans Mono",monospace;font-weight:700;color:#6d28d9;font-size:34px;letter-spacing:.1em}
+      .slot{position:absolute;top:74px;left:18px;width:calc((100% - 32px)/3 - 36px);background:#5b4ce6;color:#fff;border-radius:22px;padding:14px 14px;font-weight:800;font-size:36px;text-align:center;box-shadow:0 14px 30px rgba(91,76,230,.35)}
+      .slot span{display:block;font-family:"DejaVu Sans Mono",monospace;font-size:26px;font-weight:700;opacity:.9;margin-top:4px}
+      .cnt{white-space:nowrap;font-weight:900;font-size:136px;letter-spacing:-0.06em;line-height:.95}
+      .cta{display:inline-flex;align-items:center;background:#5b4ce6;color:#fff;font-weight:800;font-size:60px;padding:30px 52px;border-radius:999px;box-shadow:0 18px 40px rgba(91,76,230,.35)}
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="12" data-width="1080" data-height="1920">
+      <div class="bg"></div>
+      <div class="brand"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><div class="wm">Reservum<i>.</i></div></div>
+
+      <section id="s1" class="clip" data-start="0" data-duration="8" data-track-index="1" style="position:absolute;inset:0">
+        <div class="lbl abs" style="top:390px" id="s1l">Reagendar</div>
+        <div class="ttl abs" style="top:450px;font-size:104px" id="s1t">En <span class="kw hl">3 mensajes</span></div>
+        <div class="chat abs" style="top:580px" id="chat">
+          <div class="msg in" id="m1">No voy a poder llegar el jueves 😩<small>09:41</small></div>
+          <div class="msg out" id="m2">Sin problema. Tengo viernes 12:00 o sábado 10:30.
+            <div class="btns"><span class="btn" id="b1">Vie 12:00</span><span class="btn" id="b2">Sáb 10:30</span></div><small>09:41 ✓✓</small></div>
+          <div class="msg in" id="m3">Sábado 10:30<small>09:42</small></div>
+        </div>
+        <div class="abs" style="top:1235px" id="calw">
+          <div class="cal" id="cal">
+            <div class="col"><div class="d">JUE</div></div>
+            <div class="col"><div class="d">VIE</div></div>
+            <div class="col"><div class="d">SÁB</div></div>
+            <div class="slot" id="slot">Valentina<span style="display:grid"><b id="ta" style="grid-area:1/1;font-weight:700">16:00</b><b id="tb" style="grid-area:1/1;font-weight:700;opacity:0">10:30</b></span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="s4" class="clip" data-start="8" data-duration="2.1" data-track-index="1" style="position:absolute;inset:0">
+        <div class="abs cnt" style="top:520px" id="k1"><span class="kw">3</span> mensajes.</div>
+        <div class="abs cnt" style="top:700px;color:#6b7280" id="k2">0 llamadas.</div>
+      </section>
+
+      <section id="s5" class="clip" data-start="10.1" data-duration="1.9" data-track-index="1" style="position:absolute;inset:0">
+        <div class="ttl abs" style="top:520px;font-size:140px" id="s5t">Reagendar ya no es un <span class="kw hl">drama.</span></div>
+        <div class="abs" style="top:1100px" id="s5c"><span class="cta">Prueba Reservum</span></div>
+      </section>
+
+      <div class="foot">reservum.cl</div>
+      <audio id="bed" src="audio.wav" data-start="0" data-duration="12" data-track-index="5" data-volume="0.9"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#s1l",{opacity:0,y:20},{opacity:1,y:0,duration:0.3},0);
+      tl.fromTo("#s1t",{opacity:0,y:40},{opacity:1,y:0,duration:0.4,ease:"power3.out"},0.05);
+      tl.fromTo("#s1t .hl",{backgroundSize:"0% 30%"},{backgroundSize:"100% 30%",duration:0.4},0.4);
+      tl.fromTo("#chat",{opacity:0,y:60},{opacity:1,y:0,duration:0.4,ease:"power3.out"},0.1);
+      tl.fromTo("#m1",{opacity:0,y:30,scale:0.9},{opacity:1,y:0,scale:1,duration:0.3,ease:"back.out(2)",transformOrigin:"0% 100%"},0.5);
+      tl.fromTo("#calw",{opacity:0,y:40},{opacity:1,y:0,duration:0.4},1.2);
+      tl.fromTo("#m2",{opacity:0,y:30,scale:0.9},{opacity:1,y:0,scale:1,duration:0.3,ease:"back.out(2)",transformOrigin:"100% 100%"},2.6);
+      tl.fromTo("#b2",{scale:1},{scale:0.92,backgroundColor:"#5b4ce6",color:"#ffffff",duration:0.15},4.9);
+      tl.to("#b2",{scale:1,duration:0.15},5.05);
+      tl.fromTo("#m3",{opacity:0,y:30,scale:0.9},{opacity:1,y:0,scale:1,duration:0.3,ease:"back.out(2)",transformOrigin:"0% 100%"},5.3);
+      // slot moves JUE -> SÁB
+      tl.to("#slot",{x:584,duration:0.9,ease:"power3.inOut"},6.0);
+      tl.to("#slot",{scale:1.08,duration:0.12,yoyo:true,repeat:1},6.9);
+      tl.to("#ta",{opacity:0,duration:0.2},6.3);
+      tl.to("#tb",{opacity:1,duration:0.2},6.45);
+      // S4
+      tl.fromTo("#k1",{opacity:0,scale:0.7},{opacity:1,scale:1,duration:0.4,ease:"back.out(1.8)",transformOrigin:"0% 50%"},8.05);
+      tl.fromTo("#k2",{opacity:0,y:40},{opacity:1,y:0,duration:0.35},8.6);
+      // S5
+      tl.fromTo("#s5t",{opacity:0,y:50},{opacity:1,y:0,duration:0.4,ease:"power3.out"},10.15);
+      tl.fromTo("#s5t .hl",{backgroundSize:"0% 30%"},{backgroundSize:"100% 30%",duration:0.4},10.5);
+      tl.fromTo("#s5c",{opacity:0,scale:0.8},{opacity:1,scale:1,duration:0.4,ease:"back.out(2)",transformOrigin:"0% 50%"},10.6);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
