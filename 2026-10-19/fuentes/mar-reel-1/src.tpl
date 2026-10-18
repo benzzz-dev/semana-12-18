@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="gsap.min.js"></script>
+    <style>
+/*BRAND*/
+      .scene{position:absolute;left:80px;right:140px;top:360px;height:1140px;display:flex;flex-direction:column;justify-content:center}
+      .tag{display:inline-block;align-self:flex-start;font-family:"DejaVu Sans Mono",monospace;font-weight:700;letter-spacing:.18em;font-size:44px;padding:14px 28px;border-radius:14px}
+      .tag.myth{background:#1e1b4b;color:#fff}
+      .tag.real{background:#5b4ce6;color:#fff}
+      .strike{position:relative;display:inline}
+      #strike{background-image:linear-gradient(#e11d48,#e11d48);background-repeat:no-repeat;background-position:0 58%;background-size:0% 14px}
+      .big{font-size:118px}
+      .chat{background:#efeae2;border-radius:44px;padding:36px 30px;display:flex;flex-direction:column;gap:20px;box-shadow:0 24px 60px rgba(30,27,75,.14);margin-top:40px}
+      .msg{max-width:78%;padding:22px 28px 16px;border-radius:30px;font-size:44px;font-weight:600;line-height:1.15;color:#111;box-shadow:0 4px 10px rgba(0,0,0,.06)}
+      .msg small{display:block;text-align:right;font-family:"DejaVu Sans Mono",monospace;font-size:24px;color:#667;margin-top:6px;font-weight:400}
+      .in{align-self:flex-start;background:#fff;border-radius:30px 30px 30px 8px}
+      .out{align-self:flex-end;background:#d9fdd3;border-radius:30px 30px 8px 30px}
+      .card{display:flex;align-items:center;gap:26px;background:#fff;border-radius:30px;padding:26px 30px;box-shadow:0 18px 40px rgba(91,76,230,.22);border:4px solid #5b4ce6}
+      .card .ck{width:84px;height:84px;border-radius:24px;background:#5b4ce6;display:flex;align-items:center;justify-content:center;flex:none}
+      .card .ck svg{width:50px;height:50px}
+      .card b{display:block;font-size:46px;font-weight:900;letter-spacing:-0.03em}
+      .card span{font-family:"DejaVu Sans Mono",monospace;font-size:30px;color:#6d28d9;font-weight:700}
+      .notif{display:flex;gap:24px;align-items:flex-start;background:rgba(255,255,255,.92);border-radius:36px;padding:30px 32px;box-shadow:0 24px 60px rgba(30,27,75,.18);margin-top:70px}
+      .notif .ico2{width:84px;height:84px;border-radius:22px;background:#5b4ce6;display:flex;align-items:center;justify-content:center;flex:none}
+      .notif .ico2 svg{width:50px;height:50px}
+      .notif .hd{display:flex;justify-content:space-between;font-family:"DejaVu Sans Mono",monospace;font-size:28px;color:#555;font-weight:700}
+      .notif .tt{font-size:46px;font-weight:800;margin-top:8px;letter-spacing:-0.02em}
+      .notif .bd{font-size:38px;color:#333;margin-top:6px;line-height:1.2}
+      .cta{display:inline-flex;align-items:center;gap:20px;background:#5b4ce6;color:#fff;font-weight:800;font-size:60px;padding:30px 52px;border-radius:999px;box-shadow:0 18px 40px rgba(91,76,230,.35)}
+      .clockbig{font-size:300px;font-weight:900;letter-spacing:-0.06em;line-height:.9;color:#e11d48}
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="13" data-width="1080" data-height="1920">
+      <div class="bg"></div>
+      <div class="brand"><div class="ico">/*CHECK*/</div><div class="wm">Reservum<i>.</i></div></div>
+
+      <section id="s1" class="clip scene" data-start="0" data-duration="2.7" data-track-index="1">
+        <div class="tag myth" id="s1tag">MITO</div>
+        <div class="ttl big" style="margin-top:50px" id="s1t"><span id="strike">A los clientes les carga hablar con un bot</span></div>
+      </section>
+
+      <section id="s2" class="clip scene" data-start="2.7" data-duration="2.7" data-track-index="1">
+        <div class="tag real" id="s2tag">REALIDAD</div>
+        <div class="ttl" style="font-size:104px;margin-top:50px" id="s2t">Lo que les carga es <span class="kw hl">esperar</span></div>
+        <div class="clockbig" style="margin-top:40px" id="s2n">3 horas</div>
+        <div class="ttl" style="font-size:80px;margin-top:20px" id="s2s">por una respuesta.</div>
+      </section>
+
+      <section id="s3" class="clip scene" data-start="5.4" data-duration="3.0" data-track-index="1">
+        <div class="ttl" style="font-size:90px" id="s3t">Respuesta en <span class="kw hl">segundos</span></div>
+        <div class="chat" id="chat">
+          <div class="msg in" id="m1">Hola, ¿tienes hora mañana?<small>10:02</small></div>
+          <div class="msg out" id="m2">¡Hola! Tengo 11:00, 15:30 o 18:00. ¿Cuál te acomoda?<small>10:02 ✓✓</small></div>
+          <div class="msg in" id="m3">15:30 porfa<small>10:03</small></div>
+          <div class="card" id="card"><div class="ck">/*CHECK*/</div><div><b>Hora agendada</b><span>MIÉ 21 · 15:30</span></div></div>
+        </div>
+      </section>
+
+      <section id="s4" class="clip scene" data-start="8.4" data-duration="2.3" data-track-index="1">
+        <div class="ttl" style="font-size:104px" id="s4t">Y si pide algo raro, <span class="kw hl">te avisa a ti.</span></div>
+        <div class="notif" id="notif">
+          <div class="ico2">/*CHECK*/</div>
+          <div style="flex:1">
+            <div class="hd"><span>RESERVUM</span><span>ahora</span></div>
+            <div class="tt">Consulta para ti</div>
+            <div class="bd">“¿Pueden atender a 3 personas juntas el sábado?”</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="s5" class="clip scene" data-start="10.7" data-duration="2.3" data-track-index="1">
+        <div class="lbl" id="s5l">Mito derribado</div>
+        <div class="ttl" style="font-size:128px;margin-top:40px" id="s5t">Tu WhatsApp se contesta <span class="kw hl">solo.</span></div>
+        <div style="margin-top:70px" id="s5c"><span class="cta">Prueba Reservum</span></div>
+      </section>
+
+      <div class="foot">reservum.cl</div>
+      <audio id="bed" src="audio.wav" data-start="0" data-duration="13" data-track-index="5" data-volume="0.9"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      // S1
+      tl.fromTo("#s1tag",{opacity:0,scale:0.7},{opacity:1,scale:1,duration:0.3,ease:"back.out(2)",transformOrigin:"0% 50%"},0.0);
+      tl.fromTo("#s1t",{opacity:0,y:50},{opacity:1,y:0,duration:0.45,ease:"power3.out"},0.1);
+      tl.fromTo("#strike",{backgroundSize:"0% 14px"},{backgroundSize:"100% 14px",duration:0.6,ease:"power2.inOut"},1.2);
+      tl.to("#s1t",{opacity:0.45,duration:0.3},1.8);
+      // S2
+      tl.fromTo("#s2tag",{opacity:0,scale:0.7},{opacity:1,scale:1,duration:0.3,ease:"back.out(2)",transformOrigin:"0% 50%"},2.75);
+      tl.fromTo("#s2t",{opacity:0,y:40},{opacity:1,y:0,duration:0.4,ease:"power3.out"},2.85);
+      tl.fromTo("#s2t .hl",{backgroundSize:"0% 30%"},{backgroundSize:"100% 30%",duration:0.4},3.2);
+      tl.fromTo("#s2n",{opacity:0,scale:0.6},{opacity:1,scale:1,duration:0.45,ease:"back.out(1.8)",transformOrigin:"0% 50%"},3.4);
+      tl.fromTo("#s2s",{opacity:0,y:30},{opacity:1,y:0,duration:0.35},3.8);
+      tl.to("#s2n",{x:-8,duration:0.06,yoyo:true,repeat:5},4.4);
+      // S3
+      tl.fromTo("#s3t",{opacity:0,y:40},{opacity:1,y:0,duration:0.4,ease:"power3.out"},5.45);
+      tl.fromTo("#s3t .hl",{backgroundSize:"0% 30%"},{backgroundSize:"100% 30%",duration:0.4},5.8);
+      tl.fromTo("#chat",{opacity:0,y:60},{opacity:1,y:0,duration:0.4,ease:"power3.out"},5.5);
+      tl.fromTo("#m1",{opacity:0,y:30,scale:0.9},{opacity:1,y:0,scale:1,duration:0.3,ease:"back.out(2)",transformOrigin:"0% 100%"},5.75);
+      tl.fromTo("#m2",{opacity:0,y:30,scale:0.9},{opacity:1,y:0,scale:1,duration:0.3,ease:"back.out(2)",transformOrigin:"100% 100%"},6.35);
+      tl.fromTo("#m3",{opacity:0,y:30,scale:0.9},{opacity:1,y:0,scale:1,duration:0.3,ease:"back.out(2)",transformOrigin:"0% 100%"},7.0);
+      tl.fromTo("#card",{opacity:0,scale:0.7},{opacity:1,scale:1,duration:0.4,ease:"back.out(2)",transformOrigin:"50% 50%"},7.5);
+      // S4
+      tl.fromTo("#s4t",{opacity:0,y:40},{opacity:1,y:0,duration:0.4,ease:"power3.out"},8.45);
+      tl.fromTo("#s4t .hl",{backgroundSize:"0% 30%"},{backgroundSize:"100% 30%",duration:0.4},8.8);
+      tl.fromTo("#notif",{opacity:0,y:-120},{opacity:1,y:0,duration:0.45,ease:"back.out(1.6)"},9.1);
+      // S5
+      tl.fromTo("#s5l",{opacity:0,y:20},{opacity:1,y:0,duration:0.3},10.75);
+      tl.fromTo("#s5t",{opacity:0,y:50},{opacity:1,y:0,duration:0.45,ease:"power3.out"},10.8);
+      tl.fromTo("#s5t .hl",{backgroundSize:"0% 30%"},{backgroundSize:"100% 30%",duration:0.4},11.2);
+      tl.fromTo("#s5c",{opacity:0,scale:0.8},{opacity:1,scale:1,duration:0.4,ease:"back.out(2)",transformOrigin:"0% 50%"},11.4);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

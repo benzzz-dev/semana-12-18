@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="gsap.min.js"></script>
+    <style>
+/*BRAND*/
+      .scene{position:absolute;left:80px;right:140px;top:360px;height:1140px;display:flex;flex-direction:column;justify-content:center}
+      .paw{position:relative;width:150px;height:150px}
+      .paw i{position:absolute;background:#5b4ce6;border-radius:50%}
+      .paw .p0{left:35px;top:62px;width:80px;height:70px;border-radius:46% 46% 50% 50%}
+      .paw .p1{left:8px;top:34px;width:32px;height:40px}
+      .paw .p2{left:42px;top:4px;width:30px;height:40px}
+      .paw .p3{left:80px;top:4px;width:30px;height:40px}
+      .paw .p4{left:112px;top:34px;width:32px;height:40px}
+      .split{display:flex;gap:24px;height:1000px}
+      .half{flex:1;border-radius:40px;padding:40px 28px;display:flex;flex-direction:column;justify-content:space-evenly;gap:22px;position:relative;overflow:hidden}
+      .half.sin{background:#d4d4d8;color:#3f3f46;filter:saturate(.2)}
+      .half.con{background:#fff;box-shadow:0 24px 60px rgba(91,76,230,.22);border:4px solid #5b4ce6}
+      .htag{font-family:"DejaVu Sans Mono",monospace;font-weight:700;font-size:32px;letter-spacing:.12em}
+      .sin .htag{color:#52525b}
+      .con .htag{color:#6d28d9}
+      .unread{display:flex;align-items:center;gap:18px}
+      .badge{min-width:190px;height:190px;border-radius:95px;font-size:120px!important;background:#71717a;color:#fff;font-weight:900;font-size:96px;display:flex;align-items:center;justify-content:center;letter-spacing:-0.04em;font-variant-numeric:tabular-nums}
+      .row{font-size:54px;font-weight:800;line-height:1.08;letter-spacing:-0.02em}
+      .row small{display:block;font-size:40px;line-height:1.1;font-weight:600;opacity:.8;letter-spacing:0}
+      .item{display:flex;gap:18px;align-items:center}
+      .con .item{align-items:flex-start}.con .ck{margin-top:28px}
+      .ck{width:72px;height:72px;border-radius:20px;background:#5b4ce6;display:flex;align-items:center;justify-content:center;flex:none}
+      .ck svg{width:44px;height:44px}
+      .num{font-size:140px;font-weight:900;letter-spacing:-0.05em;line-height:.9;color:#5b21b6}
+      .ring{width:110px;height:110px;border-radius:50%;border:10px solid #71717a;display:flex;align-items:center;justify-content:center;font-family:"DejaVu Sans Mono",monospace;font-weight:700;font-size:28px}
+      .cta{display:inline-flex;align-items:center;gap:20px;background:#5b4ce6;color:#fff;font-weight:800;font-size:60px;padding:30px 52px;border-radius:999px;box-shadow:0 18px 40px rgba(91,76,230,.35)}
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="15" data-width="1080" data-height="1920">
+      <div class="bg"></div>
+      <div class="brand"><div class="ico">/*CHECK*/</div><div class="wm">Reservum<i>.</i></div></div>
+
+      <section id="s1" class="clip scene" data-start="0" data-duration="2.6" data-track-index="1">
+        <div class="paw" id="paw"><i class="p0"></i><i class="p1"></i><i class="p2"></i><i class="p3"></i><i class="p4"></i></div>
+        <div class="lbl" style="margin-top:50px" id="s1l">Un sábado cualquiera</div>
+        <div class="ttl" style="font-size:150px;margin-top:30px" id="s1t">Sábado 10:00.<br><span class="kw hl">Veterinaria.</span></div>
+      </section>
+
+      <section id="s2" class="clip scene" data-start="2.6" data-duration="8.0" data-track-index="1">
+        <div class="split">
+          <div class="half sin" id="hs">
+            <div class="htag">SIN RESERVUM</div>
+            <div class="unread"><div class="badge" id="cnt">0</div></div>
+            <div class="row" id="r1">mensajes sin leer</div>
+            <div class="row" id="r2">perro en la camilla</div>
+            <div class="item" id="r3"><div class="ring" id="ringing">RING</div><div class="row">teléfono sonando</div></div>
+          </div>
+          <div class="half con" id="hc">
+            <div class="htag">CON RESERVUM</div>
+            <div class="item" id="c1"><div class="ck">/*CHECK*/</div><div><div class="num">12</div><div class="row"><small>mensajes respondidos</small></div></div></div>
+            <div class="item" id="c2"><div class="ck">/*CHECK*/</div><div><div class="num">4</div><div class="row"><small>horas agendadas</small></div></div></div>
+            <div class="item" id="c3"><div class="ck">/*CHECK*/</div><div><div class="num">2</div><div class="row"><small>recordatorios de vacuna</small></div></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="s3" class="clip scene" data-start="10.6" data-duration="4.4" data-track-index="1">
+        <div class="ttl" style="font-size:112px" id="s3a">Tú atiendes al <span class="kw hl">paciente.</span></div>
+        <div class="ttl" style="font-size:112px;margin-top:40px" id="s3b">El WhatsApp se atiende <span class="kw hl">solo.</span></div>
+        <div style="margin-top:70px" id="s3c"><span class="cta">Prueba Reservum</span></div>
+      </section>
+
+      <div class="foot">reservum.cl</div>
+      <audio id="bed" src="audio.wav" data-start="0" data-duration="15" data-track-index="5" data-volume="0.9"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      // S1
+      tl.fromTo("#paw",{opacity:0,scale:0.4,rotation:-20},{opacity:1,scale:1,rotation:0,duration:0.45,ease:"back.out(2)"},0.0);
+      tl.fromTo("#s1l",{opacity:0,y:20},{opacity:1,y:0,duration:0.3},0.15);
+      tl.fromTo("#s1t",{opacity:0,y:50},{opacity:1,y:0,duration:0.45,ease:"power3.out"},0.2);
+      tl.fromTo("#s1t .hl",{backgroundSize:"0% 30%"},{backgroundSize:"100% 30%",duration:0.4},0.7);
+      // S2 sin
+      tl.fromTo("#hs",{opacity:0,x:-80},{opacity:1,x:0,duration:0.4,ease:"power3.out"},2.65);
+      tl.fromTo("#hc",{opacity:0,x:80},{opacity:0.25,x:0,duration:0.4,ease:"power3.out"},2.65);
+      const c={v:0};
+      tl.to(c,{v:12,duration:2.4,ease:"none",onUpdate:()=>{document.getElementById("cnt").textContent=Math.round(c.v);}},2.9);
+      tl.fromTo("#r1",{opacity:0,y:20},{opacity:1,y:0,duration:0.3},3.0);
+      tl.fromTo("#r2",{opacity:0,y:20},{opacity:1,y:0,duration:0.3},3.6);
+      tl.fromTo("#r3",{opacity:0,y:20},{opacity:1,y:0,duration:0.3},4.2);
+      tl.to("#ringing",{rotation:12,duration:0.08,yoyo:true,repeat:11,ease:"sine.inOut"},4.5);
+      // S2 con
+      tl.to("#hc",{opacity:1,duration:0.3},5.8);
+      tl.to("#hs",{opacity:0.55,duration:0.4},5.8);
+      tl.fromTo("#c1",{opacity:0,scale:0.8},{opacity:1,scale:1,duration:0.35,ease:"back.out(2)",transformOrigin:"0% 50%"},6.3);
+      tl.fromTo("#c2",{opacity:0,scale:0.8},{opacity:1,scale:1,duration:0.35,ease:"back.out(2)",transformOrigin:"0% 50%"},7.4);
+      tl.fromTo("#c3",{opacity:0,scale:0.8},{opacity:1,scale:1,duration:0.35,ease:"back.out(2)",transformOrigin:"0% 50%"},8.5);
+      // S3
+      tl.fromTo("#s3a",{opacity:0,y:50},{opacity:1,y:0,duration:0.45,ease:"power3.out"},10.65);
+      tl.fromTo("#s3a .hl",{backgroundSize:"0% 30%"},{backgroundSize:"100% 30%",duration:0.4},11.0);
+      tl.fromTo("#s3b",{opacity:0,y:50},{opacity:1,y:0,duration:0.45,ease:"power3.out"},11.8);
+      tl.fromTo("#s3b .hl",{backgroundSize:"0% 30%"},{backgroundSize:"100% 30%",duration:0.4},12.2);
+      tl.fromTo("#s3c",{opacity:0,scale:0.8},{opacity:1,scale:1,duration:0.4,ease:"back.out(2)",transformOrigin:"0% 50%"},12.9);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
