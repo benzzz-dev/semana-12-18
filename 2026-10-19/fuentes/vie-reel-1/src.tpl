@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="gsap.min.js"></script>
+    <style>
+/*BRAND*/
+      .abs{position:absolute;left:80px;right:140px}
+      .grid{display:grid;grid-template-columns:repeat(4,160px);gap:34px 40px}
+      .cup{width:160px;height:160px;border-radius:50%;border:6px dashed #a78bfa;background:rgba(255,255,255,.6);position:relative;overflow:hidden}
+      .grid.sm{grid-template-columns:repeat(4,130px);gap:30px 40px}.sm .cup{width:130px;height:130px}
+      .cup i{position:absolute;inset:0;border-radius:50%;background:#5b4ce6;display:flex;align-items:center;justify-content:center;color:#fff;font-style:normal;font-weight:900;font-size:58px;letter-spacing:-0.03em;transform:scale(0)}
+      .phone{position:absolute;left:200px;top:600px;width:620px;height:820px;border-radius:72px;background:#0f0d24;padding:16px;box-shadow:0 40px 80px rgba(30,27,75,.35)}
+      .screen{position:absolute;inset:16px;border-radius:58px;overflow:hidden;background:linear-gradient(180deg,#2b2466,#110e2e)}
+      .notch{position:absolute;left:50%;top:14px;width:150px;height:40px;margin-left:-75px;border-radius:20px;background:#000;z-index:9}
+      .ltime{position:absolute;left:0;right:0;top:56px;text-align:center;color:#fff;font-weight:700;font-size:104px;letter-spacing:-0.03em}
+      .ldate{position:absolute;left:0;right:0;top:176px;text-align:center;color:#c4b5fd;font-weight:600;font-size:30px}
+      .stack{position:absolute;left:22px;right:22px;top:232px;display:flex;flex-direction:column;gap:12px}
+      .n{display:flex;gap:16px;align-items:flex-start;background:#fff;border-radius:26px;padding:16px 20px}
+      .n .wa{width:54px;height:54px;border-radius:15px;background:#128c4a;flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:28px}
+      .n .h{display:flex;justify-content:space-between;font-size:23px;color:#444;font-weight:700;font-family:"DejaVu Sans Mono",monospace}
+      .n .b{font-size:31px;font-weight:600;color:#111;margin-top:2px;line-height:1.15}
+      .badge{position:absolute;right:150px;top:520px;background:#e11d48;color:#fff;font-weight:900;font-size:64px;width:150px;height:150px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 16px 36px rgba(225,29,72,.4);z-index:5}
+      .clock{width:520px;height:520px;border-radius:50%;background:#fff;border:16px solid #5b4ce6;display:flex;align-items:center;justify-content:center;box-shadow:0 30px 70px rgba(91,76,230,.3);position:relative}
+      .clock b{font-family:"DejaVu Sans Mono",monospace;font-weight:700;font-size:150px;color:#5b4ce6;letter-spacing:-0.02em}
+      .clock .knob{position:absolute;top:-62px;left:50%;margin-left:-40px;width:80px;height:46px;border-radius:12px;background:#5b4ce6}
+      .full{display:inline-block;background:#1e1b4b;color:#fff;font-family:"DejaVu Sans Mono",monospace;font-weight:700;font-size:40px;letter-spacing:.12em;padding:14px 28px;border-radius:14px}
+      .wait{display:inline-flex;align-items:center;gap:16px;background:#fff;border:4px solid #5b4ce6;color:#5b21b6;font-weight:800;font-size:44px;padding:18px 30px;border-radius:999px}
+      .wait em{width:22px;height:22px;border-radius:50%;background:#22c55e;display:inline-block}
+      .cta{display:inline-flex;align-items:center;background:#5b4ce6;color:#fff;font-weight:800;font-size:60px;padding:30px 52px;border-radius:999px;box-shadow:0 18px 40px rgba(91,76,230,.35)}
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="12.5" data-width="1080" data-height="1920">
+      <div class="bg"></div>
+      <div class="brand"><div class="ico">/*CHECK*/</div><div class="wm">Reservum<i>.</i></div></div>
+
+      <section id="s1" class="clip" data-start="0" data-duration="2.4" data-track-index="1" style="position:absolute;inset:0">
+        <div class="lbl abs" style="top:420px" id="s1l">Funcional · viernes</div>
+        <div class="ttl abs" style="top:490px;font-size:150px" id="s1t">Clase de las <span class="kw hl">19:00.</span></div>
+        <div class="ttl abs" style="top:800px;font-size:110px" id="s1b">12 cupos.</div>
+        <div class="abs grid sm" style="top:1000px" id="g1"><div class="cup"></div><div class="cup"></div><div class="cup"></div><div class="cup"></div><div class="cup"></div><div class="cup"></div><div class="cup"></div><div class="cup"></div><div class="cup"></div><div class="cup"></div><div class="cup"></div><div class="cup"></div></div>
+      </section>
+
+      <section id="s2" class="clip" data-start="2.4" data-duration="2.6" data-track-index="1" style="position:absolute;inset:0">
+        <div class="ttl abs" style="top:400px;font-size:84px" id="s2t">“¿Quedan cupos para <span class="kw hl">funcional?</span>”</div>
+        <div class="badge" id="bdg">×12</div>
+        <div class="phone" id="phone"><div class="screen">
+          <div class="ltime">12:30</div>
+          <div class="ldate">viernes 23 de octubre</div>
+          <div class="stack">
+            <div class="n" id="p1"><div class="wa">W</div><div style="flex:1"><div class="h"><span>Javi</span><span>ahora</span></div><div class="b">¿Quedan cupos para funcional?</div></div></div>
+            <div class="n" id="p2"><div class="wa">W</div><div style="flex:1"><div class="h"><span>Rodrigo</span><span>ahora</span></div><div class="b">¿Hay cupo a las 19:00?</div></div></div>
+            <div class="n" id="p3"><div class="wa">W</div><div style="flex:1"><div class="h"><span>Pauli</span><span>1 min</span></div><div class="b">¿Me guardas uno para hoy?</div></div></div>
+            <div class="n" id="p4"><div class="wa">W</div><div style="flex:1"><div class="h"><span>+9 más</span><span>2 min</span></div><div class="b">¿Quedan cupos para funcional?</div></div></div>
+          </div>
+        </div><div class="notch"></div></div>
+      </section>
+
+      <section id="s3" class="clip" data-start="5.0" data-duration="3.0" data-track-index="1" style="position:absolute;inset:0">
+        <div class="lbl abs" style="top:400px" id="s3l">Reservum responde</div>
+        <div class="ttl abs" style="top:460px;font-size:100px" id="s3t">Reservum reserva <span class="kw hl">cada cupo</span></div>
+        <div class="abs grid" style="top:820px" id="g2">
+          <div class="cup"><i>JA</i></div><div class="cup"><i>RO</i></div><div class="cup"><i>PA</i></div><div class="cup"><i>CA</i></div>
+          <div class="cup"><i>MA</i></div><div class="cup"><i>SE</i></div><div class="cup"><i>VA</i></div><div class="cup"><i>FE</i></div>
+          <div class="cup"><i>NI</i></div><div class="cup"><i>TO</i></div><div class="cup"><i>BE</i></div><div class="cup"><i>LU</i></div>
+        </div>
+        <div class="lbl abs" style="top:1405px;font-size:32px" id="s3c">Cupos tomados: <span id="cnt">0</span>/12</div>
+      </section>
+
+      <section id="s4" class="clip" data-start="8.0" data-duration="2.2" data-track-index="1" style="position:absolute;inset:0">
+        <div class="abs" style="top:420px;display:flex;justify-content:center;padding-right:0" id="s4k"><div class="clock"><div class="knob"></div><b id="tm">00:00</b></div></div>
+        <div class="ttl abs" style="top:1020px;font-size:120px" id="s4t">4 minutos.</div>
+        <div class="abs" style="top:1160px" id="s4f"><span class="full">CLASE LLENA ✓</span></div>
+        <div class="abs" style="top:1270px" id="s4w"><span class="wait"><em></em>Lista de espera activa</span></div>
+      </section>
+
+      <section id="s5" class="clip" data-start="10.2" data-duration="2.3" data-track-index="1" style="position:absolute;inset:0">
+        <div class="ttl abs" style="top:480px;font-size:130px" id="s5a">Tú preparas la clase.</div>
+        <div class="ttl abs" style="top:780px;font-size:118px" id="s5b">Los cupos se llenan <span class="kw hl">solos.</span></div>
+        <div class="abs" style="top:1180px" id="s5c"><span class="cta">Prueba Reservum</span></div>
+      </section>
+
+      <div class="foot">reservum.cl</div>
+      <audio id="bed" src="audio.wav" data-start="0" data-duration="12.5" data-track-index="5" data-volume="0.9"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const hl=(s,t)=>tl.fromTo(s,{backgroundSize:"0% 30%"},{backgroundSize:"100% 30%",duration:0.4},t);
+      tl.fromTo("#s1l",{opacity:0,y:20},{opacity:1,y:0,duration:0.3},0);
+      tl.fromTo("#s1t",{opacity:0,y:50},{opacity:1,y:0,duration:0.4,ease:"power3.out"},0.05);
+      hl("#s1t .hl",0.4);
+      tl.fromTo("#s1b",{opacity:0,y:40},{opacity:1,y:0,duration:0.35,ease:"power3.out"},0.5);
+      tl.fromTo("#g1 .cup",{opacity:0,scale:0.5},{opacity:1,scale:1,duration:0.3,stagger:0.07,ease:"back.out(2)"},0.7);
+      // S2
+      tl.fromTo("#s2t",{opacity:0,y:40},{opacity:1,y:0,duration:0.35,ease:"power3.out"},2.4);
+      hl("#s2t .hl",2.75);
+      tl.fromTo("#phone",{opacity:0,y:120},{opacity:1,y:0,duration:0.4,ease:"power3.out"},2.45);
+      ["#p4","#p3","#p2","#p1"].forEach((id,i)=>{
+        tl.fromTo(id,{opacity:0,y:-60,scale:0.9},{opacity:1,y:0,scale:1,duration:0.26,ease:"back.out(2)"},2.8+i*0.3);
+      });
+      tl.fromTo("#bdg",{opacity:0,scale:0.3,rotation:-20},{opacity:1,scale:1,rotation:0,duration:0.35,ease:"back.out(2.5)"},4.0);
+      tl.to("#phone",{x:-10,duration:0.05,yoyo:true,repeat:5},4.2);
+      // S3
+      tl.fromTo("#s3l",{opacity:0,y:20},{opacity:1,y:0,duration:0.3},5.0);
+      tl.fromTo("#s3t",{opacity:0,y:40},{opacity:1,y:0,duration:0.4,ease:"power3.out"},5.05);
+      hl("#s3t .hl",5.4);
+      tl.fromTo("#g2",{opacity:0,y:50},{opacity:1,y:0,duration:0.35,ease:"power3.out"},5.15);
+      tl.fromTo("#s3c",{opacity:0},{opacity:1,duration:0.3},5.3);
+      tl.fromTo("#g2 .cup i",{scale:0},{scale:1,duration:0.2,stagger:0.17,ease:"back.out(2.2)"},5.6);
+      const c={v:0};
+      tl.fromTo(c,{v:0},{v:12,duration:12*0.17,ease:"none",onUpdate:()=>{document.getElementById("cnt").textContent=Math.min(12,Math.floor(c.v+0.5));}},5.6);
+      // S4
+      tl.fromTo("#s4k",{opacity:0,scale:0.7},{opacity:1,scale:1,duration:0.4,ease:"back.out(1.8)"},8.0);
+      const t={v:0};
+      tl.fromTo(t,{v:0},{v:240,duration:0.9,ease:"power2.out",onUpdate:()=>{const s=Math.round(t.v);document.getElementById("tm").textContent=String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0");}},8.1);
+      tl.fromTo("#s4t",{opacity:0,y:40},{opacity:1,y:0,duration:0.35,ease:"power3.out"},8.4);
+      tl.fromTo("#s4f",{opacity:0,scale:0.6},{opacity:1,scale:1,duration:0.35,ease:"back.out(2.2)",transformOrigin:"0% 50%"},9.05);
+      tl.fromTo("#s4w",{opacity:0,y:30},{opacity:1,y:0,duration:0.35,ease:"power3.out"},9.4);
+      // S5
+      tl.fromTo("#s5a",{opacity:0,y:50},{opacity:1,y:0,duration:0.4,ease:"power3.out"},10.25);
+      tl.fromTo("#s5b",{opacity:0,y:50},{opacity:1,y:0,duration:0.4,ease:"power3.out"},10.55);
+      hl("#s5b .hl",10.9);
+      tl.fromTo("#s5c",{opacity:0,scale:0.8},{opacity:1,scale:1,duration:0.4,ease:"back.out(2)",transformOrigin:"0% 50%"},11.0);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
