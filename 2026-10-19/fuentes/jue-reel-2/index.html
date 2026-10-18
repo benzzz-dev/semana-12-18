@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="gsap.min.js"></script>
+    <style>
+@font-face{font-family:"Inter";src:url("fonts/Inter-Regular.otf");font-weight:400}
+@font-face{font-family:"Inter";src:url("fonts/Inter-SemiBold.otf");font-weight:600}
+@font-face{font-family:"Inter";src:url("fonts/Inter-Bold.otf");font-weight:700}
+@font-face{font-family:"Inter";src:url("fonts/Inter-ExtraBold.otf");font-weight:800}
+@font-face{font-family:"Inter";src:url("fonts/Inter-Black.otf");font-weight:900}
+@font-face{font-family:"DejaVu Sans Mono";src:url("fonts/DejaVuSansMono.ttf");font-weight:400}
+@font-face{font-family:"DejaVu Sans Mono";src:url("fonts/DejaVuSansMono-Bold.ttf");font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#ece8fd}
+#root{position:relative;width:100%;height:100%;overflow:hidden;font-family:"Inter",sans-serif;color:#1e1b4b}
+.bg{position:absolute;inset:0;background:linear-gradient(160deg,#ece8fd 0%,#e3e6fb 48%,#f6e6f1 100%)}
+.brand{position:absolute;left:80px;top:236px;display:flex;align-items:center;gap:18px;z-index:20}
+.brand .ico{width:68px;height:68px;border-radius:18px;background:#5b4ce6;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(91,76,230,.3)}
+.brand .ico svg{width:40px;height:40px}
+.brand .wm{font-weight:800;font-size:46px;letter-spacing:-0.03em;color:#1e1b4b}
+.brand .wm i{font-style:normal;color:#5b4ce6}
+.foot{position:absolute;left:80px;bottom:400px;font-family:"DejaVu Sans Mono",monospace;font-size:34px;color:#1e1b4b;opacity:.7;letter-spacing:.04em;z-index:20}
+.lbl{font-family:"DejaVu Sans Mono",monospace;font-weight:700;color:#6d28d9;letter-spacing:.16em;text-transform:uppercase;font-size:34px}
+.ttl{font-weight:900;letter-spacing:-0.045em;line-height:.98;color:#1e1b4b}
+.kw{color:#5b21b6}
+.hl{background-image:linear-gradient(#c4b5fd,#c4b5fd);background-repeat:no-repeat;background-position:0 88%;background-size:100% 30%;padding:0 6px}
+
+      .abs{position:absolute;left:80px;right:140px}
+      .tag{display:inline-block;font-family:"DejaVu Sans Mono",monospace;font-weight:700;letter-spacing:.16em;font-size:46px;padding:14px 30px;border-radius:14px}
+      .tag.no{background:#1e1b4b;color:#fff}
+      .tag.si{background:#5b4ce6;color:#fff}
+      .line{position:relative;display:block;font-weight:900;letter-spacing:-0.045em;line-height:1.02;font-size:104px;color:#1e1b4b}
+      .stk{background-image:linear-gradient(#e11d48,#e11d48);background-repeat:no-repeat;background-position:0 58%;background-size:0% 14px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+      .strike{position:absolute;left:-10px;right:-10px;top:52%;height:14px;background:#e11d48;border-radius:8px;transform-origin:0 50%;transform:scaleX(0)}
+      .verd{display:inline-block;font-family:"DejaVu Sans Mono",monospace;font-weight:700;font-size:40px;letter-spacing:.12em;padding:10px 22px;border-radius:12px;margin-bottom:16px}
+      .verd.ok{background:#ede9fe;color:#5b21b6}
+      .verd.bad{background:#ffe4e6;color:#be123c}
+      .clock{font-family:"DejaVu Sans Mono",monospace;font-weight:700;font-size:200px;color:#5b4ce6;letter-spacing:-0.02em;line-height:1}
+      .chat{background:#efeae2;border-radius:44px;padding:30px 28px;box-shadow:0 24px 60px rgba(30,27,75,.14);display:flex;flex-direction:column;gap:18px}
+      .msg{max-width:86%;padding:22px 28px 14px;font-size:40px;font-weight:600;color:#111;line-height:1.2}
+      .msg small{display:block;text-align:right;font-family:"DejaVu Sans Mono",monospace;font-size:22px;color:#667;margin-top:6px;font-weight:400}
+      .in{align-self:flex-start;background:#fff;border-radius:30px 30px 30px 8px}
+      .out{align-self:flex-end;background:#d9fdd3;border-radius:30px 30px 8px 30px}
+      .phone{position:absolute;left:350px;top:1090px;width:340px;height:450px;border-radius:56px;background:#0f0d24;box-shadow:0 30px 60px rgba(30,27,75,.35)}
+      .phone .scr{position:absolute;inset:12px;border-radius:46px;background:linear-gradient(180deg,#2b2466,#110e2e)}
+      .phone .nt{position:absolute;left:50%;top:12px;width:110px;height:30px;margin-left:-55px;border-radius:15px;background:#000}
+      .phone .bd{position:absolute;left:30px;right:30px;top:120px;background:#fff;border-radius:22px;padding:16px 18px;font-size:26px;font-weight:700;color:#111}
+      .phone .bd span{display:block;font-family:"DejaVu Sans Mono",monospace;font-size:20px;color:#5b21b6;margin-bottom:4px}
+      .cta{display:inline-flex;align-items:center;background:#5b4ce6;color:#fff;font-weight:800;font-size:60px;padding:30px 52px;border-radius:999px;box-shadow:0 18px 40px rgba(91,76,230,.35)}
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="11" data-width="1080" data-height="1920">
+      <div class="bg"></div>
+      <div class="brand"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><div class="wm">Reservum<i>.</i></div></div>
+
+      <section id="s1" class="clip" data-start="0" data-duration="5.2" data-track-index="1" style="position:absolute;inset:0">
+        <div class="abs" style="top:420px;height:90px">
+          <span class="tag no" id="tmito" style="position:absolute;left:0;top:0">MITO</span>
+          <span class="tag si" id="treal" style="position:absolute;left:0;top:0">REALIDAD</span>
+        </div>
+        <div class="abs" style="top:580px" id="la">
+          <span class="verd ok" id="va">✓ CIERTO</span>
+          <span class="line">Si no contesto rápido, pierdo al cliente.</span>
+        </div>
+        <div class="abs" style="top:1010px" id="lb">
+          <span class="verd bad" id="vb">✗ FALSO</span>
+          <span class="line"><span id="lbt" class="stk">Entonces no puedo soltar el celular.</span></span>
+        </div>
+      </section>
+
+      <section id="s2" class="clip" data-start="5.2" data-duration="3.4" data-track-index="1" style="position:absolute;inset:0">
+        <div class="ttl abs" style="top:410px;font-size:104px" id="s2t">Respuesta en <span class="kw hl">segundos</span></div>
+        <div class="lbl abs" style="top:650px" id="s2l">sin que tú toques el celular</div>
+        <div class="abs clock" style="top:730px" id="clk">00:00</div>
+        <div class="abs chat" style="top:990px" id="s2c">
+          <div class="msg in" id="m1">Hola, ¿tienes hora mañana?<small>18:42</small></div>
+          <div class="msg out" id="m2">¡Hola! Mañana tengo 11:00, 15:30 y 18:00. ¿Cuál te acomoda?<small>18:42 ✓✓</small></div>
+        </div>
+      </section>
+
+      <section id="s3" class="clip" data-start="8.6" data-duration="2.4" data-track-index="1" style="position:absolute;inset:0">
+        <div class="ttl abs" style="top:500px;font-size:160px" id="s3a">Suelta el <span class="kw hl">celular.</span></div>
+        <div class="abs" style="top:900px" id="s3c"><span class="cta">Prueba Reservum</span></div>
+        <div class="phone" id="ph" data-layout-allow-overflow><div class="scr"></div><div class="nt"></div><div class="bd"><span>RESERVUM</span>Hora agendada ✓</div></div>
+      </section>
+
+      <div class="foot">reservum.cl</div>
+      <audio id="bed" src="audio.wav" data-start="0" data-duration="11" data-track-index="5" data-volume="0.9"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.set(["#treal","#va","#vb"],{opacity:0},0);
+      tl.fromTo("#tmito",{opacity:0,scale:0.6},{opacity:1,scale:1,duration:0.3,ease:"back.out(2.2)",transformOrigin:"0% 50%"},0);
+      tl.fromTo("#la",{opacity:0,y:50},{opacity:1,y:0,duration:0.4,ease:"power3.out"},0.1);
+      tl.fromTo("#lb",{opacity:0,y:50},{opacity:1,y:0,duration:0.4,ease:"power3.out"},0.7);
+      // realidad
+      tl.to("#tmito",{opacity:0,y:-20,duration:0.25},2.6);
+      tl.fromTo("#treal",{opacity:0,scale:0.6},{opacity:1,scale:1,duration:0.3,ease:"back.out(2.2)",transformOrigin:"0% 50%"},2.7);
+      tl.fromTo("#va",{opacity:0,scale:0.6},{opacity:1,scale:1,duration:0.3,ease:"back.out(2.2)",transformOrigin:"0% 50%"},3.0);
+      tl.fromTo("#vb",{opacity:0,scale:0.6},{opacity:1,scale:1,duration:0.3,ease:"back.out(2.2)",transformOrigin:"0% 50%"},3.6);
+      tl.fromTo("#lbt",{backgroundSize:"0% 14px"},{backgroundSize:"100% 14px",duration:0.4,ease:"power2.inOut"},3.75);
+      tl.to("#lbt",{color:"#94a3b8",duration:0.3},3.9);
+      tl.to("#lb",{x:-12,duration:0.05,yoyo:true,repeat:3},4.2);
+      // S2
+      const c={v:0};
+      tl.fromTo("#s2t",{opacity:0,y:40},{opacity:1,y:0,duration:0.35,ease:"power3.out"},5.2);
+      tl.fromTo("#s2t .hl",{backgroundSize:"0% 30%"},{backgroundSize:"100% 30%",duration:0.4},5.55);
+      tl.fromTo("#s2l",{opacity:0},{opacity:1,duration:0.3},5.45);
+      tl.fromTo("#clk",{opacity:0,scale:0.8},{opacity:1,scale:1,duration:0.35,ease:"back.out(1.8)",transformOrigin:"0% 50%"},5.35);
+      tl.fromTo("#s2c",{opacity:0,y:60},{opacity:1,y:0,duration:0.4,ease:"power3.out"},5.5);
+      tl.fromTo("#m1",{opacity:0,x:-40},{opacity:1,x:0,duration:0.3},5.7);
+      tl.fromTo(c,{v:0},{v:5,duration:1.2,ease:"none",onUpdate:()=>{document.getElementById("clk").textContent="00:0"+Math.floor(c.v);}},5.8);
+      tl.fromTo("#m2",{opacity:0,y:40,scale:0.95},{opacity:1,y:0,scale:1,duration:0.4,ease:"back.out(1.6)",transformOrigin:"100% 100%"},7.0);
+      tl.to("#clk",{scale:1.08,duration:0.12,yoyo:true,repeat:1,transformOrigin:"0% 50%"},7.0);
+      // S3
+      tl.fromTo("#s3a",{opacity:0,y:50},{opacity:1,y:0,duration:0.4,ease:"power3.out"},8.65);
+      tl.fromTo("#s3a .hl",{backgroundSize:"0% 30%"},{backgroundSize:"100% 30%",duration:0.4},9.0);
+      tl.fromTo("#ph",{opacity:0,y:60,rotation:0},{opacity:1,y:0,duration:0.35,ease:"power3.out"},8.7);
+      tl.to("#ph",{x:900,rotation:28,duration:0.7,ease:"power2.in"},9.4);
+      tl.fromTo("#s3c",{opacity:0,scale:0.8},{opacity:1,scale:1,duration:0.4,ease:"back.out(2)",transformOrigin:"0% 50%"},9.3);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
