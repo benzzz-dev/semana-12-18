@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="gsap.min.js"></script>
+    <style>
+@font-face{font-family:"Inter";src:url("fonts/Inter-Regular.otf");font-weight:400}
+@font-face{font-family:"Inter";src:url("fonts/Inter-SemiBold.otf");font-weight:600}
+@font-face{font-family:"Inter";src:url("fonts/Inter-Bold.otf");font-weight:700}
+@font-face{font-family:"Inter";src:url("fonts/Inter-ExtraBold.otf");font-weight:800}
+@font-face{font-family:"Inter";src:url("fonts/Inter-Black.otf");font-weight:900}
+@font-face{font-family:"DejaVu Sans Mono";src:url("fonts/DejaVuSansMono.ttf");font-weight:400}
+@font-face{font-family:"DejaVu Sans Mono";src:url("fonts/DejaVuSansMono-Bold.ttf");font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#ece8fd}
+#root{position:relative;width:100%;height:100%;overflow:hidden;font-family:"Inter",sans-serif;color:#1e1b4b}
+.bg{position:absolute;inset:0;background:linear-gradient(160deg,#ece8fd 0%,#e3e6fb 48%,#f6e6f1 100%)}
+.brand{position:absolute;left:80px;top:236px;display:flex;align-items:center;gap:18px;z-index:20}
+.brand .ico{width:68px;height:68px;border-radius:18px;background:#5b4ce6;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(91,76,230,.3)}
+.brand .ico svg{width:40px;height:40px}
+.brand .wm{font-weight:800;font-size:46px;letter-spacing:-0.03em;color:#1e1b4b}
+.brand .wm i{font-style:normal;color:#5b4ce6}
+.foot{position:absolute;left:80px;bottom:400px;font-family:"DejaVu Sans Mono",monospace;font-size:34px;color:#1e1b4b;opacity:.7;letter-spacing:.04em;z-index:20}
+.lbl{font-family:"DejaVu Sans Mono",monospace;font-weight:700;color:#6d28d9;letter-spacing:.16em;text-transform:uppercase;font-size:34px}
+.ttl{font-weight:900;letter-spacing:-0.045em;line-height:.98;color:#1e1b4b}
+.kw{color:#5b21b6}
+.hl{background-image:linear-gradient(#c4b5fd,#c4b5fd);background-repeat:no-repeat;background-position:0 88%;background-size:100% 30%;padding:0 6px}
+
+      .abs{position:absolute;left:80px;right:140px}
+      .web{position:absolute;right:0;top:0;width:420px;height:420px;opacity:.16}
+      .bat{position:absolute;width:90px;height:44px;opacity:.22}
+      .nail{width:150px;height:220px;border-radius:75px 75px 34px 34px;position:relative;box-shadow:0 18px 36px rgba(30,27,75,.22);border:5px solid rgba(255,255,255,.75)}
+      .finger{width:190px;height:330px;border-radius:95px 95px 40px 40px;background:#f3d3c1;display:flex;justify-content:center;padding-top:26px}
+      .n-hook{width:200px;height:290px;border-radius:100px 100px 44px 44px;background:linear-gradient(180deg,#f97316 0 30%,#fde7d9 30% 100%);border:6px solid rgba(255,255,255,.8);box-shadow:0 26px 50px rgba(249,115,22,.3)}
+      .n-web{background:repeating-radial-gradient(circle at 50% 108%,transparent 0 24px,rgba(255,255,255,.85) 24px 27px),repeating-conic-gradient(from -90deg at 50% 108%,transparent 0 13deg,rgba(255,255,255,.85) 13deg 15deg),#232136}
+      .n-pump{background:repeating-linear-gradient(90deg,#f97316 0 30px,#ea580c 30px 36px)}
+      .n-pump::after{content:"";position:absolute;left:62px;top:-4px;width:18px;height:30px;border-radius:6px;background:#15803d}
+      .n-blood{background:radial-gradient(circle at 30px 64px,#b91c1c 0 13px,transparent 14px),radial-gradient(circle at 96px 82px,#b91c1c 0 15px,transparent 16px),linear-gradient(180deg,#b91c1c 0 26%,transparent 26%),linear-gradient(90deg,transparent 22px,#b91c1c 22px 38px,transparent 38px 88px,#b91c1c 88px 104px,transparent 104px),#fbe4e4;background-size:100% 100%,100% 100%,100% 100%,100% 36%;background-repeat:no-repeat}
+      .n-mate{background:#18181b;border-color:#3f3f46}
+      .row{display:flex;align-items:center;gap:44px;margin-bottom:34px}
+      .row .w{font-weight:900;letter-spacing:-0.045em;font-size:96px;line-height:1}
+      .row .nail{width:110px;height:160px;border-radius:55px 55px 26px 26px;flex:none}
+      .row .n-pump::after{left:42px}
+      .num{font-weight:900;letter-spacing:-0.05em;font-size:330px;line-height:.9;color:#5b21b6}
+      .stack{display:flex;flex-direction:column;gap:16px}
+      .n{display:flex;gap:18px;align-items:center;background:#fff;border-radius:28px;padding:18px 24px;box-shadow:0 12px 28px rgba(30,27,75,.12)}
+      .n .wa{width:58px;height:58px;border-radius:16px;background:#128c4a;flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:30px}
+      .n .h{font-size:24px;color:#555;font-weight:700;font-family:"DejaVu Sans Mono",monospace}
+      .n .b{font-size:36px;font-weight:700;color:#111;margin-top:2px}
+      .cal{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+      .col{background:rgba(255,255,255,.7);border-radius:30px;padding:22px 18px;box-shadow:0 14px 30px rgba(30,27,75,.1)}
+      .col h4{font-family:"DejaVu Sans Mono",monospace;font-weight:700;color:#6d28d9;font-size:32px;letter-spacing:.1em;text-align:center;margin-bottom:16px}
+      .slot{height:74px;border-radius:16px;background:#ddd6fe;margin-bottom:12px;position:relative;overflow:hidden;font-family:"DejaVu Sans Mono",monospace;font-size:24px;color:#6d28d9;font-weight:700;display:flex;align-items:center;padding-left:16px}
+      .slot i{position:absolute;inset:0;background:#5b4ce6;transform:scaleX(0);transform-origin:0 50%}
+      .slot span{position:relative;z-index:2;color:#4c1d95}
+      .stamp{display:inline-block;background:#1e1b4b;color:#fff;font-family:"DejaVu Sans Mono",monospace;font-weight:700;font-size:44px;letter-spacing:.14em;padding:16px 32px;border-radius:16px}
+      .cta{display:inline-flex;align-items:center;background:#5b4ce6;color:#fff;font-weight:800;font-size:60px;padding:30px 52px;border-radius:999px;box-shadow:0 18px 40px rgba(91,76,230,.35)}
+      .bigbrand{display:flex;align-items:center;gap:26px}
+      .bigbrand .ico{width:120px;height:120px;border-radius:32px;background:#5b4ce6;display:flex;align-items:center;justify-content:center;box-shadow:0 16px 34px rgba(91,76,230,.35)}
+      .bigbrand .ico svg{width:72px;height:72px}
+      .bigbrand .wm{font-weight:900;font-size:110px;letter-spacing:-0.04em}
+      .bigbrand .wm i{font-style:normal;color:#5b4ce6}
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="14" data-width="1080" data-height="1920">
+      <div class="bg"></div>
+      <svg class="web" viewBox="0 0 100 100" fill="none" stroke="#1e1b4b" stroke-width=".8"><path d="M100 0L0 100M100 0L30 100M100 0L0 70M100 0L60 100M100 0L0 40"/><path d="M80 0Q82 18 100 20M60 0Q64 36 100 40M40 0Q46 54 100 60M20 0Q28 72 100 80"/></svg>
+      <div class="brand"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><div class="wm">Reservum<i>.</i></div></div>
+
+      <section id="s1" class="clip" data-start="0" data-duration="2.7" data-track-index="1" style="position:absolute;inset:0">
+        <svg class="bat" id="bat1" style="left:760px;top:1090px" viewBox="0 0 90 44"><path fill="#1e1b4b" d="M45 14c3-6 6-6 8 0 8-10 22-12 37-6-9 2-13 9-12 18-6-5-13-4-17 3-4-4-8-4-16 6-8-10-12-10-16-6-4-7-11-8-17-3 1-9-3-16-12-18 15-6 29-4 37 6 2-6 5-6 8 0z"/></svg>
+        <svg class="bat" id="bat2" style="left:860px;top:1230px;width:60px;height:30px" viewBox="0 0 90 44"><path fill="#1e1b4b" d="M45 14c3-6 6-6 8 0 8-10 22-12 37-6-9 2-13 9-12 18-6-5-13-4-17 3-4-4-8-4-16 6-8-10-12-10-16-6-4-7-11-8-17-3 1-9-3-16-12-18 15-6 29-4 37 6 2-6 5-6 8 0z"/></svg>
+        <div class="lbl abs" style="top:420px" id="s1l">Salón de uñas · octubre</div>
+        <div class="ttl abs" style="top:490px;font-size:128px" id="s1t">Semana de <span class="kw hl">Halloween</span> en un salón de uñas</div>
+        <div class="abs" style="top:1040px;display:flex;justify-content:center" id="s1n"><div class="finger"><div class="n-hook"></div></div></div>
+      </section>
+
+      <section id="s2" class="clip" data-start="2.7" data-duration="2.9" data-track-index="1" style="position:absolute;inset:0">
+        <div class="lbl abs" style="top:420px" id="s2l">Lo que piden</div>
+        <div class="abs" style="top:510px">
+          <div class="row" id="r1"><div class="nail n-web"></div><div class="w">Telaraña.</div></div>
+          <div class="row" id="r2"><div class="nail n-pump"></div><div class="w" style="color:#c2410c">Calabaza.</div></div>
+          <div class="row" id="r3"><div class="nail n-blood"></div><div class="w" style="color:#b91c1c">Sangre.</div></div>
+          <div class="row" id="r4"><div class="nail n-mate"></div><div class="w">Negro mate.</div></div>
+        </div>
+      </section>
+
+      <section id="s3" class="clip" data-start="5.6" data-duration="2.8" data-track-index="1" style="position:absolute;inset:0">
+        <div class="abs num" style="top:400px" id="cnt">0</div>
+        <div class="ttl abs" style="top:720px;font-size:96px" id="s3t">consultas por <span class="kw hl">WhatsApp</span></div>
+        <div class="abs stack" style="top:960px" id="st">
+          <div class="n" id="q1"><div class="wa">W</div><div><div class="h">Cami · ahora</div><div class="b">¿Haces telarañas para el sábado?</div></div></div>
+          <div class="n" id="q2"><div class="wa">W</div><div><div class="h">Fran · ahora</div><div class="b">¿Cuánto sale el negro mate?</div></div></div>
+          <div class="n" id="q3"><div class="wa">W</div><div><div class="h">Antonia · 1 min</div><div class="b">¿Tienes hora el viernes 30?</div></div></div>
+          <div class="n" id="q4"><div class="wa">W</div><div><div class="h">+35 más · 2 min</div><div class="b">¿Hay hora para Halloween?</div></div></div>
+        </div>
+      </section>
+
+      <section id="s4" class="clip" data-start="8.4" data-duration="3.0" data-track-index="1" style="position:absolute;inset:0">
+        <div class="lbl abs" style="top:420px" id="s4l">Jueves 29 a sábado 31</div>
+        <div class="ttl abs" style="top:480px;font-size:104px" id="s4t">Agenda jueves a sábado: <span class="kw hl">completa</span></div>
+        <div class="abs cal" style="top:810px" id="cal">
+          <div class="col"><h4>JUE 29</h4><div class="slot"><i></i><span>11:00</span></div><div class="slot"><i></i><span>13:00</span></div><div class="slot"><i></i><span>15:00</span></div><div class="slot"><i></i><span>17:00</span></div><div class="slot"><i></i><span>19:00</span></div></div>
+          <div class="col"><h4>VIE 30</h4><div class="slot"><i></i><span>11:00</span></div><div class="slot"><i></i><span>13:00</span></div><div class="slot"><i></i><span>15:00</span></div><div class="slot"><i></i><span>17:00</span></div><div class="slot"><i></i><span>19:00</span></div></div>
+          <div class="col"><h4>SÁB 31</h4><div class="slot"><i></i><span>10:00</span></div><div class="slot"><i></i><span>12:00</span></div><div class="slot"><i></i><span>14:00</span></div><div class="slot"><i></i><span>16:00</span></div><div class="slot"><i></i><span>18:00</span></div></div>
+        </div>
+        <div class="abs" style="top:1355px" id="s4s"><span class="stamp">AGENDA COMPLETA ✓</span></div>
+      </section>
+
+      <section id="s5" class="clip" data-start="11.4" data-duration="2.6" data-track-index="1" style="position:absolute;inset:0">
+        <div class="ttl abs" style="top:460px;font-size:124px" id="s5a">Y tú sin escribir <span class="kw hl">una sola</span> respuesta.</div>
+        <div class="abs bigbrand" style="top:1040px" id="s5b"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><div class="wm">Reservum<i>.</i></div></div>
+        <div class="abs" style="top:1240px" id="s5c"><span class="cta">Pruébalo en reservum.cl</span></div>
+      </section>
+
+      <div class="foot">reservum.cl</div>
+      <audio id="bed" src="audio.wav" data-start="0" data-duration="14" data-track-index="5" data-volume="0.9"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const hl=(s,t)=>tl.fromTo(s,{backgroundSize:"0% 30%"},{backgroundSize:"100% 30%",duration:0.4},t);
+      const up=(s,t,d=0.4)=>tl.fromTo(s,{opacity:0,y:50},{opacity:1,y:0,duration:d,ease:"power3.out"},t);
+      // S1
+      tl.fromTo("#s1l",{opacity:0,y:20},{opacity:1,y:0,duration:0.3},0);
+      up("#s1t",0.05);
+      hl("#s1t .hl",0.45);
+      tl.fromTo("#s1n",{opacity:0,y:140,rotation:-6},{opacity:1,y:0,rotation:0,duration:0.55,ease:"back.out(1.6)"},0.5);
+      tl.fromTo(["#bat1","#bat2"],{opacity:0,x:-80},{opacity:0.22,x:0,duration:0.8,stagger:0.2,ease:"power2.out"},0.6);
+      tl.to("#bat1",{y:-30,duration:1.2,ease:"sine.inOut"},1.4);
+      tl.to("#bat2",{y:20,duration:1.2,ease:"sine.inOut"},1.4);
+      // S2
+      tl.fromTo("#s2l",{opacity:0},{opacity:1,duration:0.3},2.7);
+      ["#r1","#r2","#r3","#r4"].forEach((id,i)=>{
+        tl.fromTo(id+" .nail",{opacity:0,scale:0.3,rotation:-25},{opacity:1,scale:1,rotation:0,duration:0.35,ease:"back.out(2.2)"},2.8+i*0.6);
+        tl.fromTo(id+" .w",{opacity:0,x:-60},{opacity:1,x:0,duration:0.35,ease:"power3.out"},2.85+i*0.6);
+      });
+      // S3
+      tl.fromTo("#cnt",{opacity:0,scale:0.6,transformOrigin:"0% 50%"},{opacity:1,scale:1,duration:0.35,ease:"back.out(2)"},5.6);
+      const c={v:0};
+      tl.fromTo(c,{v:0},{v:38,duration:1.6,ease:"power1.out",onUpdate:()=>{document.getElementById("cnt").textContent=Math.round(c.v);}},5.7);
+      up("#s3t",5.75);
+      hl("#s3t .hl",6.1);
+      ["#q1","#q2","#q3","#q4"].forEach((id,i)=>{
+        tl.fromTo(id,{opacity:0,y:-50,scale:0.92},{opacity:1,y:0,scale:1,duration:0.28,ease:"back.out(2)"},6.0+i*0.35);
+      });
+      tl.to("#cnt",{scale:1.08,duration:0.12,yoyo:true,repeat:1,transformOrigin:"0% 50%"},7.35);
+      // S4
+      tl.fromTo("#s4l",{opacity:0},{opacity:1,duration:0.3},8.4);
+      up("#s4t",8.45);
+      hl("#s4t .hl",8.85);
+      tl.fromTo("#cal .col",{opacity:0,y:60},{opacity:1,y:0,duration:0.35,stagger:0.08,ease:"power3.out"},8.6);
+      tl.to("#cal .slot i",{scaleX:1,duration:0.16,stagger:0.085,ease:"power2.out"},9.05);
+      tl.to("#cal .slot span",{color:"#ffffff",duration:0.1,stagger:0.085},9.1);
+      tl.fromTo("#s4s",{opacity:0,scale:0.5,rotation:-8},{opacity:1,scale:1,rotation:0,duration:0.35,ease:"back.out(2.5)",transformOrigin:"0% 50%"},10.45);
+      // S5
+      up("#s5a",11.45);
+      hl("#s5a .hl",11.85);
+      tl.fromTo("#s5b",{opacity:0,scale:0.8},{opacity:1,scale:1,duration:0.4,ease:"back.out(2)",transformOrigin:"0% 50%"},12.0);
+      tl.fromTo("#s5c",{opacity:0,y:30},{opacity:1,y:0,duration:0.35,ease:"power3.out"},12.3);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
