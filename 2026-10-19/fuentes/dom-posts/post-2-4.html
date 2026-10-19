@@ -1,0 +1,80 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><style>@font-face{font-family:"Inter";src:url("fonts/Inter-Regular.otf");font-weight:400}
+@font-face{font-family:"Inter";src:url("fonts/Inter-SemiBold.otf");font-weight:600}
+@font-face{font-family:"Inter";src:url("fonts/Inter-Bold.otf");font-weight:700}
+@font-face{font-family:"Inter";src:url("fonts/Inter-ExtraBold.otf");font-weight:800}
+@font-face{font-family:"Inter";src:url("fonts/Inter-Black.otf");font-weight:900}
+@font-face{font-family:"DejaVu Sans Mono";src:url("fonts/DejaVuSansMono.ttf");font-weight:400}
+@font-face{font-family:"DejaVu Sans Mono";src:url("fonts/DejaVuSansMono-Bold.ttf");font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#ece8fd}
+#root{position:relative;width:100%;height:100%;overflow:hidden;font-family:"Inter",sans-serif;color:#1e1b4b}
+.bg{position:absolute;inset:0;background:linear-gradient(160deg,#ece8fd 0%,#e3e6fb 48%,#f6e6f1 100%)}
+.brand{position:absolute;left:80px;top:236px;display:flex;align-items:center;gap:18px;z-index:20}
+.brand .ico{width:68px;height:68px;border-radius:18px;background:#5b4ce6;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(91,76,230,.3)}
+.brand .ico svg{width:40px;height:40px}
+.brand .wm{font-weight:800;font-size:46px;letter-spacing:-0.03em;color:#1e1b4b}
+.brand .wm i{font-style:normal;color:#5b4ce6}
+.foot{position:absolute;left:80px;bottom:400px;font-family:"DejaVu Sans Mono",monospace;font-size:34px;color:#1e1b4b;opacity:.7;letter-spacing:.04em;z-index:20}
+.lbl{font-family:"DejaVu Sans Mono",monospace;font-weight:700;color:#6d28d9;letter-spacing:.16em;text-transform:uppercase;font-size:34px}
+.ttl{font-weight:900;letter-spacing:-0.045em;line-height:.98;color:#1e1b4b}
+.kw{color:#5b21b6}
+.hl{background-image:linear-gradient(#c4b5fd,#c4b5fd);background-repeat:no-repeat;background-position:0 88%;background-size:100% 30%;padding:0 6px}
+
+html,body{height:1350px}
+.brand{top:70px}
+.foot{bottom:64px;font-size:30px}
+.counter{position:absolute;right:80px;top:88px;font-family:"DejaVu Sans Mono",monospace;font-weight:700;color:#6d28d9;font-size:32px;letter-spacing:.08em}
+.swipe{position:absolute;right:80px;bottom:60px;font-family:"DejaVu Sans Mono",monospace;font-weight:700;color:#6d28d9;font-size:34px}
+.lbl.t{position:absolute;left:80px;top:200px;font-size:30px}
+.q{position:absolute;left:80px;right:80px;top:255px;font-size:92px}
+.chat{position:absolute;left:80px;right:80px;top:560px;background:#efeae2;border-radius:44px;padding:34px 30px;display:flex;flex-direction:column;gap:20px;box-shadow:0 24px 60px rgba(30,27,75,.12)}
+.msg{max-width:82%;padding:20px 28px 14px;font-size:38px;font-weight:600;line-height:1.2;color:#111;box-shadow:0 4px 10px rgba(0,0,0,.06)}
+.msg small{display:block;text-align:right;font-family:"DejaVu Sans Mono",monospace;font-size:22px;color:#667;margin-top:4px;font-weight:400}
+.in{align-self:flex-start;background:#fff;border-radius:30px 30px 30px 8px}
+.out{align-self:flex-end;background:#d9fdd3;border-radius:30px 30px 8px 30px}
+.chips{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+.chip{background:#fff;border:3px solid #5b4ce6;color:#5b21b6;font-weight:800;font-size:32px;padding:10px 22px;border-radius:999px}
+.chip.f{background:#5b4ce6;color:#fff}
+.pl{display:flex;justify-content:space-between;gap:30px;font-size:36px;padding:6px 0;border-bottom:2px dashed rgba(0,0,0,.12)}
+.pl:last-of-type{border-bottom:0}
+.map{height:170px;border-radius:20px;margin-top:12px;position:relative;overflow:hidden;background:#e5e7eb;background-image:linear-gradient(90deg,rgba(255,255,255,.9) 14px,transparent 14px),linear-gradient(rgba(255,255,255,.9) 14px,transparent 14px);background-size:120px 120px,90px 90px;background-position:40px 0,0 30px}
+.pin{position:absolute;left:46%;top:24%;width:60px;height:60px;border-radius:50% 50% 50% 0;background:#e11d48;transform:rotate(-45deg)}
+.pin::after{content:"";position:absolute;left:19px;top:19px;width:22px;height:22px;border-radius:50%;background:#fff}
+.lnk{color:#2563eb;font-family:"DejaVu Sans Mono",monospace;font-size:28px;font-weight:700}
+.auto{position:absolute;left:80px;bottom:130px;font-family:"DejaVu Sans Mono",monospace;font-weight:700;font-size:28px;color:#6d28d9;letter-spacing:.1em}
+
+.big{position:absolute;left:80px;right:80px;top:200px}
+.note{position:absolute;left:80px;right:80px;font-size:40px;font-weight:600;line-height:1.3;color:#374151}
+.door{position:absolute;left:80px;top:610px;width:420px;height:590px;border-radius:26px 26px 0 0;background:linear-gradient(180deg,#a78bfa,#8b5cf6);box-shadow:0 24px 50px rgba(30,27,75,.18)}
+.door::before{content:"";position:absolute;left:36px;right:36px;top:36px;height:250px;border-radius:14px;background:rgba(255,255,255,.35)}
+.door .knob{position:absolute;right:34px;top:330px;width:30px;height:30px;border-radius:50%;background:#fde68a}
+.sign{position:absolute;left:60px;top:110px;width:300px;transform:rotate(-6deg);transform-origin:50% -60px}
+.sign .str{position:absolute;left:50%;top:-70px;width:150px;height:80px;margin-left:-75px;border:4px solid #1e1b4b;border-bottom:0;border-radius:75px 75px 0 0;clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
+.sign .pl{background:#fff;border:6px solid #dc2626;border-radius:16px;padding:22px 0;text-align:center;font-family:"DejaVu Sans Mono",monospace;font-weight:700;font-size:46px;color:#dc2626;letter-spacing:.1em}
+.sign .hr{text-align:center;font-family:"DejaVu Sans Mono",monospace;font-size:22px;color:#1e1b4b;margin-top:8px;font-weight:700}
+.phone{position:absolute;left:560px;top:580px;width:440px;height:620px;border-radius:64px;background:#1e1b4b;padding:18px;box-shadow:0 30px 60px rgba(30,27,75,.3)}
+.scr{width:100%;height:100%;border-radius:48px;background:linear-gradient(180deg,#312e81,#5b4ce6);padding:70px 18px 18px;position:relative}
+.scr .tm{position:absolute;left:0;right:0;top:56px;text-align:center;color:#fff;font-weight:300;font-size:84px;letter-spacing:-0.02em}
+.scr .dt{position:absolute;left:0;right:0;top:30px;text-align:center;color:#e0e7ff;font-size:22px;font-weight:600}
+.nt{background:rgba(255,255,255,.92);border-radius:22px;padding:12px 16px;margin-bottom:10px;display:flex;gap:12px;align-items:center}
+.nt .wa{width:42px;height:42px;border-radius:11px;background:#128c4a;flex:none;color:#fff;font-weight:900;font-size:22px;display:flex;align-items:center;justify-content:center}
+.nt .h{font-family:"DejaVu Sans Mono",monospace;font-size:16px;color:#555;font-weight:700}
+.nt .b{font-size:22px;font-weight:700;color:#111;line-height:1.15}
+.badge{position:absolute;right:-18px;top:-18px;width:76px;height:76px;border-radius:50%;background:#dc2626;color:#fff;font-weight:900;font-size:42px;display:flex;align-items:center;justify-content:center;border:5px solid #fff}
+.circles{position:absolute;left:80px;right:80px;display:grid;grid-template-columns:repeat(5,1fr);gap:28px;justify-items:center}
+.circles i{width:150px;height:150px;border-radius:50%;border:8px solid #5b4ce6;background:rgba(255,255,255,.6);display:flex;align-items:center;justify-content:center;font-style:normal;font-family:"DejaVu Sans Mono",monospace;font-weight:700;font-size:44px;color:#6d28d9}
+.circles i.on{background:#5b4ce6;color:#fff;box-shadow:0 14px 30px rgba(91,76,230,.4)}
+.step{font-weight:900;letter-spacing:-0.05em;font-size:150px;line-height:.9;color:#5b21b6}
+.tagp{position:absolute;display:flex;align-items:center;justify-content:center;flex-direction:column;width:440px;height:440px;border-radius:60px;background:#5b4ce6;color:#fff;transform:rotate(-6deg);box-shadow:0 30px 60px rgba(91,76,230,.35)}
+.tagp b{font-weight:900;font-size:190px;letter-spacing:-0.05em;line-height:1}
+.tagp span{font-family:"DejaVu Sans Mono",monospace;font-weight:700;font-size:34px;letter-spacing:.12em}
+.tagp::before{content:"";position:absolute;left:50%;top:34px;width:44px;height:44px;margin-left:-22px;border-radius:50%;background:#ece8fd}
+.dm{position:absolute;left:80px;right:80px;background:#fff;border-radius:40px;padding:30px;box-shadow:0 24px 60px rgba(30,27,75,.12)}
+.dm .top{display:flex;align-items:center;gap:16px;font-weight:800;font-size:34px;padding-bottom:16px;border-bottom:2px solid #eee;margin-bottom:22px}
+.dm .av{width:64px;height:64px;border-radius:50%;background:#5b4ce6;display:flex;align-items:center;justify-content:center}
+.dm .av svg{width:38px;height:38px}
+.dm .bub{margin-left:auto;width:max-content;background:linear-gradient(90deg,#7c3aed,#5b4ce6);color:#fff;font-weight:900;font-size:64px;letter-spacing:.02em;padding:22px 44px;border-radius:44px 44px 10px 44px}
+.dm .in{background:#f1f0f7;font-size:36px;font-weight:600;padding:20px 28px;border-radius:36px 36px 36px 10px;width:max-content;max-width:90%;margin-top:18px;line-height:1.25}
+</style></head><body><div id="root"><div class="bg"></div><div class="brand"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><div class="wm">Reservum<i>.</i></div></div><div class="counter">4/5</div><div class="lbl t">Paso 3</div><div class="step" style="position:absolute;left:80px;top:250px">3.</div>
+<div class="ttl q" style="top:420px;font-size:104px">25% de descuento <span class="kw hl">de por vida</span></div>
+<div class="tagp" style="left:320px;top:720px;transform:rotate(5deg);background:#1e1b4b"><b>25%</b><span>PARA SIEMPRE ∞</span></div><div class="foot">reservum.cl</div></div></body></html>

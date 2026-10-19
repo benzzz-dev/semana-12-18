@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="gsap.min.js"></script>
+    <style>
+/*BRAND*/
+      .abs{position:absolute;left:80px;right:140px}
+      .cal{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+      .d{background:rgba(255,255,255,.75);border-radius:26px;height:190px;padding:18px;box-shadow:0 10px 24px rgba(30,27,75,.08);position:relative;overflow:hidden}
+      .d s{display:block;text-decoration:none;font-family:"DejaVu Sans Mono",monospace;font-weight:700;font-size:26px;color:#6d28d9;letter-spacing:.08em}
+      .d b{display:block;font-weight:900;font-size:76px;letter-spacing:-0.04em;line-height:1.05;color:#1e1b4b}
+      .d em{position:absolute;left:18px;bottom:16px;font-style:normal;font-family:"DejaVu Sans Mono",monospace;font-weight:700;font-size:20px;letter-spacing:.06em;color:#fff;background:#c2410c;padding:4px 10px;border-radius:8px}
+      .d.hot{background:#1e1b4b}
+      .d.hot s{color:#c4b5fd}.d.hot b{color:#fff}
+      .d.fer em{background:#5b4ce6}
+      .pump{position:absolute;width:120px;height:100px}
+      .pump .b{position:absolute;inset:14px 0 0 0;border-radius:50%;background:repeating-linear-gradient(90deg,#f97316 0 26px,#ea580c 26px 32px);box-shadow:0 14px 30px rgba(234,88,12,.25)}
+      .pump .s{position:absolute;left:52px;top:0;width:16px;height:26px;border-radius:5px;background:#15803d}
+      .stack{display:flex;flex-direction:column;gap:18px}
+      .n{display:flex;gap:18px;align-items:center;background:#fff;border-radius:28px;padding:20px 24px;box-shadow:0 12px 28px rgba(30,27,75,.12)}
+      .n .wa{width:62px;height:62px;border-radius:16px;background:#128c4a;flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:32px}
+      .n .h{font-size:24px;color:#555;font-weight:700;font-family:"DejaVu Sans Mono",monospace}
+      .n .b{font-size:38px;font-weight:700;color:#111;margin-top:2px}
+      .chk{display:flex;align-items:center;gap:30px;margin-bottom:46px}
+      .chk .c{width:120px;height:120px;border-radius:34px;background:#5b4ce6;flex:none;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 30px rgba(91,76,230,.35)}
+      .chk .c svg{width:70px;height:70px}
+      .chk .t{font-weight:900;letter-spacing:-0.045em;font-size:84px;line-height:1}
+      .cta{display:inline-flex;align-items:center;background:#5b4ce6;color:#fff;font-weight:800;font-size:58px;padding:30px 50px;border-radius:999px;box-shadow:0 18px 40px rgba(91,76,230,.35)}
+      .bigbrand{display:flex;align-items:center;gap:26px}
+      .bigbrand .ico{width:120px;height:120px;border-radius:32px;background:#5b4ce6;display:flex;align-items:center;justify-content:center;box-shadow:0 16px 34px rgba(91,76,230,.35)}
+      .bigbrand .ico svg{width:72px;height:72px}
+      .bigbrand .wm{font-weight:900;font-size:110px;letter-spacing:-0.04em}
+      .bigbrand .wm i{font-style:normal;color:#5b4ce6}
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="13" data-width="1080" data-height="1920">
+      <div class="bg"></div>
+      <div class="brand"><div class="ico">/*CHECK*/</div><div class="wm">Reservum<i>.</i></div></div>
+
+      <section id="s1" class="clip" data-start="0" data-duration="3.2" data-track-index="1" style="position:absolute;inset:0">
+        <div class="lbl abs" style="top:420px" id="s1l">26 oct – 1 nov</div>
+        <div class="ttl abs" style="top:490px;font-size:124px" id="s1t">Esta semana: <span class="kw hl">Halloween</span> + 2 feriados</div>
+        <div class="abs cal" style="top:930px" id="cal">
+          <div class="d"><s>LUN</s><b>26</b></div><div class="d"><s>MAR</s><b>27</b></div><div class="d"><s>MIÉ</s><b>28</b></div><div class="d"><s>JUE</s><b>29</b></div>
+          <div class="d"><s>VIE</s><b>30</b></div><div class="d hot" id="d31"><s>SÁB</s><b>31</b><em>FERIADO</em></div><div class="d hot fer" id="d1"><s>DOM</s><b>1</b><em>FERIADO</em></div>
+          <div class="d" style="background:transparent;box-shadow:none"><div class="pump" id="pmp" style="left:20px;top:40px"><div class="s"></div><div class="b"></div></div></div>
+        </div>
+      </section>
+
+      <section id="s2" class="clip" data-start="3.2" data-duration="3.0" data-track-index="1" style="position:absolute;inset:0">
+        <div class="lbl abs" style="top:420px" id="s2l">Lo que ya está llegando</div>
+        <div class="ttl abs" style="top:490px;font-size:112px" id="s2t">“¿Atienden el <span class="kw hl">31</span>?”</div>
+        <div class="abs stack" style="top:820px" id="st">
+          <div class="n" id="q1"><div class="wa">W</div><div><div class="h">Javi · ahora</div><div class="b">¿Atienden el 31?</div></div></div>
+          <div class="n" id="q2"><div class="wa">W</div><div><div class="h">Pía · ahora</div><div class="b">¿Tienes hora el viernes?</div></div></div>
+          <div class="n" id="q3"><div class="wa">W</div><div><div class="h">Seba · 1 min</div><div class="b">¿Abren el domingo 1?</div></div></div>
+          <div class="n" id="q4"><div class="wa">W</div><div><div class="h">Mari · 2 min</div><div class="b">¿Hay hora el jueves 29?</div></div></div>
+        </div>
+      </section>
+
+      <section id="s3" class="clip" data-start="6.2" data-duration="3.4" data-track-index="1" style="position:absolute;inset:0">
+        <div class="lbl abs" style="top:420px" id="s3l">Con Reservum</div>
+        <div class="abs" style="top:540px">
+          <div class="chk" id="k1"><div class="c">/*CHECK*/</div><div class="t">Respuestas <span class="kw">listas.</span></div></div>
+          <div class="chk" id="k2"><div class="c">/*CHECK*/</div><div class="t">Horas <span class="kw">agendadas.</span></div></div>
+          <div class="chk" id="k3"><div class="c">/*CHECK*/</div><div class="t">Recordatorios <span class="kw">enviados.</span></div></div>
+        </div>
+      </section>
+
+      <section id="s4" class="clip" data-start="9.6" data-duration="3.4" data-track-index="1" style="position:absolute;inset:0">
+        <div class="ttl abs" style="top:460px;font-size:136px" id="s4a">Tú enfócate en <span class="kw hl">atender</span>.</div>
+        <div class="abs bigbrand" style="top:1000px" id="s4b"><div class="ico">/*CHECK*/</div><div class="wm">Reservum<i>.</i></div></div>
+        <div class="abs" style="top:1200px" id="s4c"><span class="cta">Pruébalo en reservum.cl</span></div>
+      </section>
+
+      <div class="foot">reservum.cl</div>
+      <audio id="bed" src="audio.wav" data-start="0" data-duration="13" data-track-index="5" data-volume="0.9"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const hl=(s,t)=>tl.fromTo(s,{backgroundSize:"0% 30%"},{backgroundSize:"100% 30%",duration:0.35},t);
+      const up=(s,t,d=0.4)=>tl.fromTo(s,{opacity:0,y:50},{opacity:1,y:0,duration:d,ease:"power3.out"},t);
+      // S1
+      tl.fromTo("#s1l",{opacity:0,y:20},{opacity:1,y:0,duration:0.25},0);
+      up("#s1t",0.05);
+      hl("#s1t .hl",0.45);
+      tl.fromTo("#cal .d",{opacity:0,y:50,scale:0.9},{opacity:1,y:0,scale:1,duration:0.3,stagger:0.07,ease:"back.out(1.8)"},0.5);
+      tl.fromTo(["#d31","#d1"],{scale:1},{scale:1.08,duration:0.18,yoyo:true,repeat:1,stagger:0.25},1.5);
+      tl.fromTo("#pmp",{opacity:0,rotation:-20,scale:0.5},{opacity:1,rotation:0,scale:1,duration:0.45,ease:"back.out(2)"},1.4);
+      tl.to("#pmp",{y:-14,duration:0.6,yoyo:true,repeat:1,ease:"sine.inOut"},1.9);
+      // S2
+      tl.fromTo("#s2l",{opacity:0},{opacity:1,duration:0.25},3.2);
+      up("#s2t",3.25);
+      hl("#s2t .hl",3.6);
+      ["#q1","#q2","#q3","#q4"].forEach((id,i)=>{
+        tl.fromTo(id,{opacity:0,y:-80,scale:0.92},{opacity:1,y:0,scale:1,duration:0.28,ease:"back.out(2)"},3.6+i*0.45);
+      });
+      // S3
+      tl.fromTo("#s3l",{opacity:0},{opacity:1,duration:0.25},6.2);
+      ["#k1","#k2","#k3"].forEach((id,i)=>{
+        tl.fromTo(id+" .c",{opacity:0,scale:0.3,rotation:-30},{opacity:1,scale:1,rotation:0,duration:0.35,ease:"back.out(2.5)"},6.35+i*0.85);
+        tl.fromTo(id+" .t",{opacity:0,x:-60},{opacity:1,x:0,duration:0.35,ease:"power3.out"},6.45+i*0.85);
+      });
+      // S4
+      up("#s4a",9.65);
+      hl("#s4a .hl",10.05);
+      tl.fromTo("#s4b",{opacity:0,scale:0.8},{opacity:1,scale:1,duration:0.4,ease:"back.out(2)",transformOrigin:"0% 50%"},10.3);
+      tl.fromTo("#s4c",{opacity:0,y:30},{opacity:1,y:0,duration:0.35,ease:"power3.out"},10.6);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
