@@ -1,0 +1,855 @@
+{
+  "semana_lunes": "2026-10-26",
+  "repo": "benzzz-dev/semana-12-18",
+  "carpeta": "2026-10-26/",
+  "fechas_especiales": [
+    {
+      "fecha": "2026-10-31",
+      "nombre": "Halloween (sábado)",
+      "angulo": "Semana peak de uñas, maquillaje y pelo de disfraz; jueves y viernes se llenan, el sábado 31 llegan consultas de última hora."
+    },
+    {
+      "fecha": "2026-10-31",
+      "nombre": "Día de las Iglesias Evangélicas y Protestantes (feriado, sábado)",
+      "angulo": "¿Abres el 31? Feriado + Halloween el mismo día; el bot contesta aunque el local cierre."
+    },
+    {
+      "fecha": "2026-11-01",
+      "nombre": "Día de Todos los Santos (feriado, domingo)",
+      "angulo": "Segundo feriado seguido; las consultas del fin de semana quedan agendadas para el lunes 2."
+    },
+    {
+      "fecha": "2026-11 / 2026-12",
+      "nombre": "Temporada de licenciaturas y graduaciones",
+      "angulo": "Peinados y maquillaje se reservan con semanas de anticipación; abrir agenda de noviembre y diciembre."
+    },
+    {
+      "fecha": "2026-11-27",
+      "nombre": "Black Friday Chile (27 al 30 de noviembre, confirmado por la CCS)",
+      "angulo": "Gift cards y packs de servicios vendidos por WhatsApp; atender en diciembre."
+    },
+    {
+      "fecha": "2026-12-25",
+      "nombre": "Navidad / Año Nuevo",
+      "angulo": "Diciembre se agenda en noviembre; preparar la agenda reventada de fin de año."
+    }
+  ],
+  "dias": [
+    {
+      "fecha": "2026-10-26",
+      "dia": "lun",
+      "piezas": [
+        {
+          "id": "lun-post-1",
+          "tipo": "carrusel",
+          "hora_chile": "09:30",
+          "tema": "Semana con 2 feriados: cómo se reparte tu agenda de lunes a domingo",
+          "formato": "Carrusel 6 slides, fórmula framework (IG8), objetivo guardados",
+          "slides_o_escenas": [
+            {
+              "texto_en_pantalla": "Esta semana tiene 5 días hábiles y 2 feriados. Así se reparte tu agenda.",
+              "nota_visual": "Portada: calendario semanal lun–dom, sáb 31 y dom 1 marcados en lila. 'desliza →'"
+            },
+            {
+              "texto_en_pantalla": "Lunes y martes: se llenan las horas que nadie pidió el fin de semana.",
+              "nota_visual": "Columnas lun/mar con bloques violetas apareciendo"
+            },
+            {
+              "texto_en_pantalla": "Miércoles: último día tranquilo. Úsalo para confirmar.",
+              "nota_visual": "Ícono de check doble de WhatsApp junto a 'confirmar'"
+            },
+            {
+              "texto_en_pantalla": "Jueves y viernes: el peak. Todos quieren hora antes del feriado.",
+              "nota_visual": "Bloques llenos hasta arriba, etiqueta mono 'PEAK'"
+            },
+            {
+              "texto_en_pantalla": "Sábado 31 y domingo 1: tú descansas o atiendes medio día. Las consultas siguen llegando igual.",
+              "nota_visual": "Burbujas de WhatsApp entrando sobre los días feriados"
+            },
+            {
+              "texto_en_pantalla": "Con Reservum, cada consulta del fin de semana queda agendada para el lunes 2.",
+              "nota_visual": "Cierre con logo Reservum y reservum.cl"
+            }
+          ],
+          "caption": "Esta semana tiene dos feriados seguidos y eso cambia cómo se llena tu agenda: el jueves y el viernes se vuelven el peak.\n\nDesliza para ver qué pasa cada día y dónde se te escapan las horas.\n\nGuárdalo para organizar la semana.\n\n#pymeschile #agendaonline #barberiachile #peluqueriachile"
+        },
+        {
+          "id": "lun-reel-1",
+          "tipo": "reel",
+          "hora_chile": "12:30",
+          "tema": "Lunes 9:00: 23 mensajes del fin de semana que bajan a cero",
+          "formato": "Reel 12 s, mockup de iPhone con contador de notificaciones",
+          "slides_o_escenas": [
+            {
+              "texto_en_pantalla": "Lunes, 9:00.",
+              "nota_visual": "Pantalla de iPhone bloqueada, hora 9:00 grande"
+            },
+            {
+              "texto_en_pantalla": "23 mensajes sin leer",
+              "nota_visual": "Contador de notificaciones de WhatsApp sube de 0 a 23 con pops"
+            },
+            {
+              "texto_en_pantalla": "¿Tienes hora hoy? · ¿Cuánto sale? · ¿Atienden el sábado?",
+              "nota_visual": "Notificaciones apiladas cayendo rápido"
+            },
+            {
+              "texto_en_pantalla": "Con Reservum: 23 respondidos, 9 agendados.",
+              "nota_visual": "El contador baja a 0, aparece agenda con 9 bloques violetas"
+            },
+            {
+              "texto_en_pantalla": "Tu WhatsApp se contesta solo.",
+              "nota_visual": "Cierre con logo y reservum.cl"
+            }
+          ],
+          "caption": "Lunes 9:00 y el WhatsApp tiene 23 mensajes del fin de semana esperando. Tú todavía no abres.\n\nCon Reservum esos mensajes ya están respondidos y las horas, agendadas.\n\nMándaselo a quien abre el local hoy.\n\n#emprendimientochile #pymeschile #whatsappbusiness #santiagochile",
+          "portada_texto": "23 mensajes sin leer un lunes a las 9:00"
+        },
+        {
+          "id": "lun-post-2",
+          "tipo": "imagen",
+          "hora_chile": "16:30",
+          "tema": "Lo que escribe tu cliente vs. lo que quiere decir",
+          "formato": "Imagen sola, dos columnas tipo meme tipográfico, objetivo comentarios",
+          "slides_o_escenas": [
+            {
+              "texto_en_pantalla": "Lo que escribe: '¿tienes hora?' / Lo que quiere decir: 'agéndame ahora, no mañana' · '¿cuánto sale?' → 'dime un precio y una hora' · 'después te confirmo' → 'recuérdamelo'",
+              "nota_visual": "Dos columnas: izquierda burbuja gris, derecha burbuja violeta. Título arriba, reservum.cl abajo"
+            }
+          ],
+          "caption": "Tu cliente escribe \"¿tienes hora?\", pero lo que quiere decir es \"agéndame ahora, antes de que le pregunte a otro\".\n\nArmamos un pequeño diccionario de WhatsApp de negocio de servicios.\n\n¿Cuál agregarías tú? Déjalo en los comentarios.\n\n#emprendedorachile #pymeschile #esteticachile #reservasonline"
+        },
+        {
+          "id": "lun-reel-2",
+          "tipo": "reel",
+          "hora_chile": "20:00",
+          "tema": "Maquillaje de Halloween: consultas con foto de referencia que se agendan solas",
+          "formato": "Reel 14 s, chat que se agenda solo",
+          "slides_o_escenas": [
+            {
+              "texto_en_pantalla": "'¿Me puedes hacer este?' 📷",
+              "nota_visual": "Burbuja con foto de referencia de maquillaje de calavera (ilustración plana, sin marcas)"
+            },
+            {
+              "texto_en_pantalla": "Llegan 14 iguales en una tarde.",
+              "nota_visual": "Contador 1→14 de burbujas con fotos"
+            },
+            {
+              "texto_en_pantalla": "Reservum responde: duración, valor y horas libres.",
+              "nota_visual": "Respuesta automática con tarjeta: '90 min · desde $25.000 · jue 17:00 / vie 11:30'"
+            },
+            {
+              "texto_en_pantalla": "'El viernes 11:30' → Agendado ✓",
+              "nota_visual": "Bloque violeta cae en la agenda del viernes"
+            },
+            {
+              "texto_en_pantalla": "Tú maquillas. Tu WhatsApp agenda.",
+              "nota_visual": "Cierre con logo, detalle sutil de calabaza en el punto de Reservum"
+            }
+          ],
+          "caption": "En la semana de Halloween llegan decenas de \"¿me puedes hacer este?\" con foto de referencia, y cada uno pide duración, precio y una hora.\n\nReservum responde con esos tres datos y agenda en el mismo chat.\n\nEtiqueta a tu maquilladora favorita.\n\n#halloweenchile #maquillajehalloween #maquillajechile #esteticachile",
+          "portada_texto": "14 '¿me puedes hacer este?' en una tarde"
+        }
+      ]
+    },
+    {
+      "fecha": "2026-10-27",
+      "dia": "mar",
+      "piezas": [
+        {
+          "id": "mar-post-1",
+          "tipo": "carrusel",
+          "hora_chile": "09:30",
+          "tema": "El abono que salva tu sábado: cómo pedir seña sin incomodar",
+          "formato": "Carrusel 6 slides, listicle (IG5), objetivo guardados",
+          "slides_o_escenas": [
+            {
+              "texto_en_pantalla": "Cómo pedir abono para reservar sin que la clienta se sienta desconfiada",
+              "nota_visual": "Portada: título grande, 'abono' subrayado en lila. 'desliza →'"
+            },
+            {
+              "texto_en_pantalla": "1. Dilo antes de agendar, no después.",
+              "nota_visual": "Burbuja de ejemplo: 'Para reservar pedimos un abono de $5.000 que se descuenta del total'"
+            },
+            {
+              "texto_en_pantalla": "2. Monto chico y fijo. Que no parezca un cobro.",
+              "nota_visual": "Ícono de moneda con '$5.000'"
+            },
+            {
+              "texto_en_pantalla": "3. Explica para qué es: 'así guardamos tu hora solo para ti'.",
+              "nota_visual": "Burbuja violeta con la frase"
+            },
+            {
+              "texto_en_pantalla": "4. Deja clara la regla de cambio: 'puedes reagendar hasta 24 h antes'.",
+              "nota_visual": "Reloj con 24 h"
+            },
+            {
+              "texto_en_pantalla": "5. Automatízalo: Reservum envía el mensaje y confirma la hora cuando llega el abono.",
+              "nota_visual": "Cierre con mockup del chat y reservum.cl"
+            }
+          ],
+          "caption": "Pedir abono no es desconfiar de tu clienta: es cuidar la hora que le estás guardando a ella y no a otra.\n\nAcá van 5 formas de pedirlo sin que suene a cobro, con los mensajes de ejemplo.\n\nGuárdalo para cuando armes tus respuestas.\n\n#unaschile #manicurechile #esteticachile #agendaonline"
+        },
+        {
+          "id": "mar-reel-1",
+          "tipo": "reel",
+          "hora_chile": "12:30",
+          "tema": "Cuánto pierdes al mes con 2 inasistencias a la semana",
+          "formato": "Reel 11 s, conteo/estadística con tipografía cinética",
+          "slides_o_escenas": [
+            {
+              "texto_en_pantalla": "2 inasistencias a la semana",
+              "nota_visual": "Número '2' gigante entrando con rebote"
+            },
+            {
+              "texto_en_pantalla": "× $12.000 el corte",
+              "nota_visual": "Multiplicador aparece en violeta"
+            },
+            {
+              "texto_en_pantalla": "× 4 semanas",
+              "nota_visual": "Calendario mensual con 8 sillas vacías marcadas"
+            },
+            {
+              "texto_en_pantalla": "= $96.000 al mes",
+              "nota_visual": "Contador sube de $0 a $96.000"
+            },
+            {
+              "texto_en_pantalla": "Un recordatorio 24 h antes cambia esa cuenta.",
+              "nota_visual": "Notificación de recordatorio + check de confirmación; logo y reservum.cl"
+            }
+          ],
+          "caption": "Dos inasistencias a la semana en una barbería de $12.000 el corte son $96.000 menos al mes. Haz la cuenta con tus precios.\n\nReservum manda el recordatorio 24 horas antes y, si el cliente no puede, le ofrece otra hora.\n\nGuárdalo y calcula lo tuyo.\n\n#barberiachile #barberoschile #pymeschile #agendaonline",
+          "portada_texto": "$96.000 al mes en sillas vacías"
+        },
+        {
+          "id": "mar-post-2",
+          "tipo": "imagen",
+          "hora_chile": "16:30",
+          "tema": "'Te respondo apenas me desocupe': la frase que regala clientes a la competencia",
+          "formato": "Imagen sola, frase tipográfica, objetivo compartidos",
+          "slides_o_escenas": [
+            {
+              "texto_en_pantalla": "\"Te respondo apenas me desocupe\" — la frase que más clientes le regala a la competencia.",
+              "nota_visual": "Frase grande tachada con resaltador lila; debajo, chica: 'mientras tanto, le preguntó a otro local'"
+            }
+          ],
+          "caption": "\"Te respondo apenas me desocupe\" suena amable, pero mientras atiendes, ese cliente ya le escribió a otros dos locales.\n\nEl que contesta primero suele ser el que agenda.\n\nMándaselo a alguien que siempre está \"apenas se desocupe\".\n\n#emprendimientochile #pymeschile #whatsappbusiness #peluqueriachile"
+        },
+        {
+          "id": "mar-reel-2",
+          "tipo": "reel",
+          "hora_chile": "20:00",
+          "tema": "Veterinaria: el recordatorio de vacuna que se agenda solo",
+          "formato": "Reel 13 s, mockup de iPhone con chat de WhatsApp",
+          "slides_o_escenas": [
+            {
+              "texto_en_pantalla": "A Luna le toca su vacuna anual.",
+              "nota_visual": "Ilustración plana de perrita + tarjeta 'Vacuna anual · vence 30/10'"
+            },
+            {
+              "texto_en_pantalla": "Reservum le escribe a su dueña.",
+              "nota_visual": "Burbuja: 'Hola Carla, a Luna le toca su vacuna. ¿Te acomoda el martes 10:00 o el jueves 17:30?'"
+            },
+            {
+              "texto_en_pantalla": "'El jueves'",
+              "nota_visual": "Respuesta de la clienta"
+            },
+            {
+              "texto_en_pantalla": "Agendado ✓ + recordatorio el día antes.",
+              "nota_visual": "Bloque en la agenda y notificación programada"
+            },
+            {
+              "texto_en_pantalla": "Ningún paciente se queda sin su vacuna.",
+              "nota_visual": "Cierre con logo y reservum.cl"
+            }
+          ],
+          "caption": "A Luna le tocaba su vacuna anual y nadie tuvo que acordarse: el mensaje salió solo, con dos horas para elegir.\n\nAsí funcionan los recordatorios de control en una veterinaria con Reservum.\n\nMándaselo a tu veterinaria de confianza.\n\n#veterinariachile #mascotaschile #pymeschile #reservasonline",
+          "portada_texto": "A Luna le toca su vacuna"
+        }
+      ]
+    },
+    {
+      "fecha": "2026-10-28",
+      "dia": "mie",
+      "piezas": [
+        {
+          "id": "mie-post-1",
+          "tipo": "carrusel",
+          "hora_chile": "09:30",
+          "tema": "Los 4 momentos en que tu cliente decide irse a otro lado",
+          "formato": "Carrusel 6 slides, listicle (IG5), objetivo guardados",
+          "slides_o_escenas": [
+            {
+              "texto_en_pantalla": "4 momentos en que tu cliente decide irse a otro lado (y no te avisa)",
+              "nota_visual": "Portada con burbuja de WhatsApp en visto. 'desliza →'"
+            },
+            {
+              "texto_en_pantalla": "1. Cuando pasan más de 15 minutos sin respuesta.",
+              "nota_visual": "Reloj con 15 min en violeta"
+            },
+            {
+              "texto_en_pantalla": "2. Cuando le das la hora, pero no el precio (o al revés).",
+              "nota_visual": "Dos tarjetas, una vacía"
+            },
+            {
+              "texto_en_pantalla": "3. Cuando le preguntas '¿qué día te sirve?' en vez de ofrecerle dos horas.",
+              "nota_visual": "Comparación: pregunta abierta vs. 'mar 11:00 o jue 18:00'"
+            },
+            {
+              "texto_en_pantalla": "4. Cuando agenda, pero nadie le confirma.",
+              "nota_visual": "Chat sin check de confirmación"
+            },
+            {
+              "texto_en_pantalla": "Reservum cubre los cuatro: responde al instante, da precio y horas, y confirma.",
+              "nota_visual": "Cierre con logo y reservum.cl"
+            }
+          ],
+          "caption": "La mayoría de los clientes que pierdes no se quejan: simplemente dejan de responder y agendan en otro lado.\n\nEstos son los 4 momentos del chat donde pasa, y cómo evitar cada uno.\n\nGuárdalo y revisa tus últimos 10 chats.\n\n#emprendimientochile #pymeschile #whatsappbusiness #esteticachile"
+        },
+        {
+          "id": "mie-reel-1",
+          "tipo": "reel",
+          "hora_chile": "12:30",
+          "tema": "Tatuajes: la cotización con 3 fotos que termina en evaluación agendada",
+          "formato": "Reel 15 s, chat que se agenda solo",
+          "slides_o_escenas": [
+            {
+              "texto_en_pantalla": "'¿Cuánto me sale este?' + 3 fotos",
+              "nota_visual": "Burbuja con 3 miniaturas de bocetos (ilustraciones propias)"
+            },
+            {
+              "texto_en_pantalla": "Reservum pregunta lo justo: zona y tamaño.",
+              "nota_visual": "Botones: 'Antebrazo · Espalda · Otro' y 'Menos de 10 cm · 10–20 cm · Más'"
+            },
+            {
+              "texto_en_pantalla": "Rango de precio + evaluación de 15 min.",
+              "nota_visual": "Tarjeta: 'Desde $80.000 · evaluación gratis'"
+            },
+            {
+              "texto_en_pantalla": "'Sábado 7, 12:00' → Agendado ✓",
+              "nota_visual": "Agenda con bloque violeta"
+            },
+            {
+              "texto_en_pantalla": "Tú tatúas. Tu WhatsApp cotiza.",
+              "nota_visual": "Cierre con logo y reservum.cl"
+            }
+          ],
+          "caption": "\"¿Cuánto me sale este?\" con tres fotos y nada más: la cotización que todo tatuador recibe mientras tiene la máquina en la mano.\n\nReservum pregunta zona y tamaño, da un rango y agenda la evaluación.\n\nEtiqueta a tu tatuador.\n\n#tatuajeschile #tattoochile #tatuadoreschile #pymeschile",
+          "portada_texto": "¿Cuánto me sale este? + 3 fotos"
+        },
+        {
+          "id": "mie-post-2",
+          "tipo": "imagen",
+          "hora_chile": "16:30",
+          "tema": "Licenciaturas y graduaciones: tu agenda de peinados y maquillaje de noviembre ya se está pidiendo",
+          "formato": "Imagen sola, aviso de temporada, objetivo compartidos",
+          "slides_o_escenas": [
+            {
+              "texto_en_pantalla": "Licenciaturas y graduaciones: las horas de noviembre ya se están pidiendo. ¿Tu WhatsApp está listo?",
+              "nota_visual": "Calendario de noviembre con varios viernes y sábados marcados; ícono de birrete sutil"
+            }
+          ],
+          "caption": "Noviembre y diciembre son temporada de licenciaturas y graduaciones, y las horas de peinado y maquillaje se piden con semanas de anticipación.\n\nSi esos mensajes llegan mientras atiendes, Reservum los responde y deja la hora tomada.\n\nMándaselo a tu peluquera o maquilladora.\n\n#peluqueriachile #maquillajechile #peinados #licenciatura"
+        },
+        {
+          "id": "mie-reel-2",
+          "tipo": "reel",
+          "hora_chile": "20:00",
+          "tema": "3 barberos, 1 WhatsApp: cada uno con su agenda",
+          "formato": "Reel 12 s, motion graphics con agenda dividida",
+          "slides_o_escenas": [
+            {
+              "texto_en_pantalla": "3 barberos. 1 WhatsApp.",
+              "nota_visual": "Tres siluetas con nombres: Seba, Nico, Tomi"
+            },
+            {
+              "texto_en_pantalla": "'Quiero con el Nico, el viernes'",
+              "nota_visual": "Burbuja entrando"
+            },
+            {
+              "texto_en_pantalla": "Reservum mira solo la agenda del Nico.",
+              "nota_visual": "Columna de Nico se ilumina, otras se atenúan"
+            },
+            {
+              "texto_en_pantalla": "'Vie 18:30 o 19:15' → Agendado ✓",
+              "nota_visual": "Bloque cae en la columna de Nico"
+            },
+            {
+              "texto_en_pantalla": "Cada barbero, su agenda. Un solo número.",
+              "nota_visual": "Cierre con logo y reservum.cl"
+            }
+          ],
+          "caption": "Una barbería con tres barberos y un solo WhatsApp: el cliente pide \"con el Nico\" y alguien tiene que revisar su agenda.\n\nReservum ofrece las horas libres de ese barbero y agenda en su columna.\n\nMándaselo al dueño de tu barbería.\n\n#barberiachile #barberoschile #barbershop #agendaonline",
+          "portada_texto": "3 barberos, 1 WhatsApp"
+        }
+      ]
+    },
+    {
+      "fecha": "2026-10-29",
+      "dia": "jue",
+      "piezas": [
+        {
+          "id": "jue-post-1",
+          "tipo": "carrusel",
+          "hora_chile": "09:30",
+          "tema": "Un jueves peak en un salón de uñas, hora por hora",
+          "formato": "Carrusel 7 slides, antes/después (IG6), objetivo guardados",
+          "slides_o_escenas": [
+            {
+              "texto_en_pantalla": "Jueves antes de Halloween en un salón de uñas, hora por hora",
+              "nota_visual": "Portada con reloj y uñas decoradas ilustradas. 'desliza →'"
+            },
+            {
+              "texto_en_pantalla": "10:00 · Primera clienta. 6 mensajes nuevos.",
+              "nota_visual": "Línea de tiempo, burbujas contando"
+            },
+            {
+              "texto_en_pantalla": "12:30 · Sin almuerzo. 14 mensajes. 3 preguntan por el sábado.",
+              "nota_visual": "Contador sube"
+            },
+            {
+              "texto_en_pantalla": "15:00 · Una clienta no llega. La hora queda vacía.",
+              "nota_visual": "Bloque gris vacío"
+            },
+            {
+              "texto_en_pantalla": "19:30 · Terminas y te quedan 22 chats por responder.",
+              "nota_visual": "Celular con 22"
+            },
+            {
+              "texto_en_pantalla": "Con Reservum: los chats se responden, la hora vacía se ofrece a otra clienta y a las 19:30 solo cierras.",
+              "nota_visual": "Misma línea de tiempo en violeta, todo con check"
+            },
+            {
+              "texto_en_pantalla": "Tu agenda se llena sola.",
+              "nota_visual": "Cierre con logo y reservum.cl"
+            }
+          ],
+          "caption": "El jueves antes de Halloween es de los días más pedidos del año en un salón de uñas, y el celular no para entre clienta y clienta.\n\nDesliza para ver cómo se ve ese día hora por hora, con y sin Reservum.\n\nGuárdalo si tu jueves se parece a este.\n\n#unaschile #manicurechile #unasdehalloween #emprendedorachile"
+        },
+        {
+          "id": "jue-reel-1",
+          "tipo": "reel",
+          "hora_chile": "12:30",
+          "tema": "Jueves de Halloween: sin Reservum / con Reservum",
+          "formato": "Reel 14 s, pantalla dividida antes/después",
+          "slides_o_escenas": [
+            {
+              "texto_en_pantalla": "Jueves de Halloween",
+              "nota_visual": "Título con detalle sutil de telaraña en la esquina"
+            },
+            {
+              "texto_en_pantalla": "Sin Reservum: 31 chats, 4 respondidos",
+              "nota_visual": "Mitad izquierda gris, notificaciones acumulándose"
+            },
+            {
+              "texto_en_pantalla": "Con Reservum: 31 chats, 31 respondidos",
+              "nota_visual": "Mitad derecha violeta, checks en cascada"
+            },
+            {
+              "texto_en_pantalla": "Sin: 2 horas vacías / Con: 0",
+              "nota_visual": "Contadores lado a lado"
+            },
+            {
+              "texto_en_pantalla": "Elige tu jueves.",
+              "nota_visual": "Cierre con logo y reservum.cl"
+            }
+          ],
+          "caption": "Mismo jueves de Halloween, mismos 31 chats. La diferencia es cuántos alcanzas a responder entre clienta y clienta.\n\nCon Reservum se responden todos y las horas que se liberan se vuelven a ocupar.\n\nMándaselo a quien hoy no ha soltado el celular.\n\n#halloweenchile #esteticachile #unaschile #pymeschile",
+          "portada_texto": "31 chats, mismo jueves"
+        },
+        {
+          "id": "jue-post-2",
+          "tipo": "imagen",
+          "hora_chile": "16:30",
+          "tema": "Clientes fundadores: por qué buscamos 10 negocios y no mil",
+          "formato": "Imagen sola, promoción, objetivo seguidores",
+          "slides_o_escenas": [
+            {
+              "texto_en_pantalla": "Buscamos 10 negocios, no mil. Primer mes a mitad de precio y 25% de descuento de por vida.",
+              "nota_visual": "Grilla de 10 casillas, algunas con ícono de rubro (tijera, diente, pata, pesa); texto mono 'CLIENTES FUNDADORES'"
+            }
+          ],
+          "caption": "Buscamos 10 negocios, no mil, porque queremos acompañar de cerca a cada uno mientras Reservum crece.\n\nPrimer mes a mitad de precio y 25% de descuento de por vida. A cambio, solo tu testimonio honesto después de usarlo.\n\nEscríbenos FUNDADOR por DM.\n\n#emprendimientochile #pymeschile #santiagochile #reservasonline"
+        },
+        {
+          "id": "jue-reel-2",
+          "tipo": "reel",
+          "hora_chile": "20:00",
+          "tema": "La clienta que vuelve sola: el recordatorio de 'te toca retoque'",
+          "formato": "Reel 12 s, mockup de iPhone con notificación",
+          "slides_o_escenas": [
+            {
+              "texto_en_pantalla": "Hace 3 semanas te hiciste las uñas.",
+              "nota_visual": "Calendario que avanza 21 días"
+            },
+            {
+              "texto_en_pantalla": "Reservum le escribe sola.",
+              "nota_visual": "Notificación: 'Hola Fran, ya van 3 semanas. ¿Agendamos tu retoque?'"
+            },
+            {
+              "texto_en_pantalla": "'Sí, el martes'",
+              "nota_visual": "Respuesta"
+            },
+            {
+              "texto_en_pantalla": "Clienta que vuelve sin que tú la busques.",
+              "nota_visual": "Bloque en la agenda con ícono de vuelta"
+            },
+            {
+              "texto_en_pantalla": "Tu agenda se llena sola.",
+              "nota_visual": "Cierre con logo y reservum.cl"
+            }
+          ],
+          "caption": "La clienta que se hizo las uñas hace tres semanas no se olvidó de ti: solo nadie le recordó que le toca retoque.\n\nReservum le escribe en el momento justo y le ofrece hora.\n\nGuárdalo si trabajas con retoques.\n\n#unaschile #manicurechile #unasacrilicas #esteticachile",
+          "portada_texto": "Te toca retoque"
+        }
+      ]
+    },
+    {
+      "fecha": "2026-10-30",
+      "dia": "vie",
+      "piezas": [
+        {
+          "id": "vie-post-1",
+          "tipo": "carrusel",
+          "hora_chile": "09:30",
+          "tema": "Reseñas en Google: el mensaje después de la cita que las multiplica",
+          "formato": "Carrusel 6 slides, framework (IG8), objetivo guardados",
+          "slides_o_escenas": [
+            {
+              "texto_en_pantalla": "Tus clientes felices no dejan reseña. No es que no quieran: nadie se las pidió.",
+              "nota_visual": "Portada con 5 estrellas vacías. 'desliza →'"
+            },
+            {
+              "texto_en_pantalla": "1. Pídela el mismo día, 2 a 3 horas después de la cita.",
+              "nota_visual": "Reloj con '+2 h'"
+            },
+            {
+              "texto_en_pantalla": "2. Un solo link, directo a la reseña.",
+              "nota_visual": "Botón 'Dejar reseña'"
+            },
+            {
+              "texto_en_pantalla": "3. Mensaje corto y con nombre: 'Gracias por venir, Javi.'",
+              "nota_visual": "Burbuja de ejemplo"
+            },
+            {
+              "texto_en_pantalla": "4. Una sola vez. Nada de insistir.",
+              "nota_visual": "Ícono de 1"
+            },
+            {
+              "texto_en_pantalla": "Reservum lo manda solo después de cada cita.",
+              "nota_visual": "Cierre: estrellas llenándose, logo y reservum.cl"
+            }
+          ],
+          "caption": "La mayoría de tus clientes felices no deja reseña en Google, y no es por falta de ganas: nadie se lo pidió en el momento justo.\n\nEste es el mensaje después de la cita que funciona, paso a paso.\n\nGuárdalo para tu próxima semana.\n\n#pymeschile #emprendimientochile #clinicadental #barberiachile"
+        },
+        {
+          "id": "vie-reel-1",
+          "tipo": "reel",
+          "hora_chile": "12:30",
+          "tema": "Gimnasio: del DM '¿cuánto sale?' a la clase de prueba agendada",
+          "formato": "Reel 13 s, chat que se agenda solo",
+          "slides_o_escenas": [
+            {
+              "texto_en_pantalla": "'Hola, ¿cuánto sale el mes?'",
+              "nota_visual": "Burbuja en mockup de iPhone"
+            },
+            {
+              "texto_en_pantalla": "Reservum responde con planes…",
+              "nota_visual": "Tarjeta con 3 planes"
+            },
+            {
+              "texto_en_pantalla": "…y una clase de prueba gratis.",
+              "nota_visual": "Botones: 'Lun 19:00 · Mié 07:30 · Sáb 10:00'"
+            },
+            {
+              "texto_en_pantalla": "'Lunes 19:00' → Agendado ✓ + recordatorio",
+              "nota_visual": "Bloque en la agenda de clases"
+            },
+            {
+              "texto_en_pantalla": "De consulta a alumno.",
+              "nota_visual": "Cierre con logo y reservum.cl"
+            }
+          ],
+          "caption": "Quien pregunta \"¿cuánto sale el mes?\" casi nunca está listo para pagar, pero sí para probar una clase.\n\nReservum responde con los planes y agenda la clase de prueba en el mismo chat.\n\nMándaselo al dueño de tu gimnasio.\n\n#gimnasiochile #crossfitchile #entrenamientofuncional #pymeschile",
+          "portada_texto": "¿Cuánto sale el mes?"
+        },
+        {
+          "id": "vie-post-2",
+          "tipo": "imagen",
+          "hora_chile": "16:30",
+          "tema": "Encuesta: ¿abres el sábado 31?",
+          "formato": "Imagen sola, encuesta en comentarios, objetivo comentarios",
+          "slides_o_escenas": [
+            {
+              "texto_en_pantalla": "Sábado 31, feriado. ¿Abres? A) Todo el día B) Medio día C) Cerrado D) Depende de la agenda",
+              "nota_visual": "Cuatro tarjetas con letras grandes en violeta; calendario con 31 marcado"
+            }
+          ],
+          "caption": "Sábado 31 es feriado y también Halloween: para algunos es el día más pedido del mes, para otros es descanso.\n\nA) todo el día\nB) medio día\nC) cerrado\nD) depende de la agenda\n\nResponde con la letra en los comentarios.\n\n#emprendedorachile #pymeschile #peluqueriachile #unaschile"
+        },
+        {
+          "id": "vie-reel-2",
+          "tipo": "reel",
+          "hora_chile": "20:00",
+          "tema": "Mito vs. realidad: 'Si automatizo, pierdo el trato cercano'",
+          "formato": "Reel 12 s, mito vs. realidad con tipografía cinética",
+          "slides_o_escenas": [
+            {
+              "texto_en_pantalla": "MITO: 'Si automatizo, pierdo el trato cercano'",
+              "nota_visual": "Palabra MITO en mono violeta, frase grande"
+            },
+            {
+              "texto_en_pantalla": "REALIDAD: lo lejano es responder 3 horas después.",
+              "nota_visual": "Tachado lila sobre el mito; reloj con 3 h"
+            },
+            {
+              "texto_en_pantalla": "Reservum responde con tu tono, tus nombres y tus emojis.",
+              "nota_visual": "Burbuja: 'Holi Cami! Tengo el viernes a las 17:00 💅'"
+            },
+            {
+              "texto_en_pantalla": "Tú te quedas con lo importante: la conversación en persona.",
+              "nota_visual": "Ilustración de clienta en el sillón"
+            },
+            {
+              "texto_en_pantalla": "Cercano y a tiempo.",
+              "nota_visual": "Cierre con logo y reservum.cl"
+            }
+          ],
+          "caption": "Mucha gente cree que automatizar el WhatsApp le quita cercanía a su negocio. Lo que de verdad se siente lejano es responder tres horas después.\n\nReservum escribe con tu tono y te deja el tiempo para lo que pasa en el local.\n\n¿Mito o realidad? Cuéntanos en los comentarios.\n\n#emprendimientochile #whatsappbusiness #esteticachile #pymeschile",
+          "portada_texto": "Mito: pierdo el trato cercano"
+        }
+      ]
+    },
+    {
+      "fecha": "2026-10-31",
+      "dia": "sab",
+      "piezas": [
+        {
+          "id": "sab-post-1",
+          "tipo": "imagen",
+          "hora_chile": "09:30",
+          "tema": "Feliz Halloween: hoy tu agenda trabaja disfrazada de recepcionista",
+          "formato": "Imagen sola, humor de fecha, objetivo compartidos",
+          "slides_o_escenas": [
+            {
+              "texto_en_pantalla": "Hoy tu agenda viene disfrazada de recepcionista. Y no se saca el disfraz ni el feriado.",
+              "nota_visual": "Ícono de calendario con antifaz y sombrero de bruja sutil; fondo pastel con calabaza pequeña"
+            }
+          ],
+          "caption": "Feliz Halloween. Hoy tu agenda viene disfrazada de recepcionista y no se saca el disfraz ni aunque sea feriado.\n\nResponde, agenda y confirma mientras tú atiendes, o mientras descansas.\n\nMándaselo a quien hoy trabaja con disfraz.\n\n#halloweenchile #halloween2026 #pymeschile #emprendedorachile"
+        },
+        {
+          "id": "sab-reel-1",
+          "tipo": "reel",
+          "hora_chile": "12:30",
+          "tema": "Hoy es 31: lo que tu WhatsApp ya resolvió esta semana (ejemplo)",
+          "formato": "Reel 12 s, conteos con tipografía cinética",
+          "slides_o_escenas": [
+            {
+              "texto_en_pantalla": "Semana de Halloween, salón de ejemplo:",
+              "nota_visual": "Etiqueta mono 'EJEMPLO'"
+            },
+            {
+              "texto_en_pantalla": "118 mensajes respondidos",
+              "nota_visual": "Contador 0→118"
+            },
+            {
+              "texto_en_pantalla": "41 horas agendadas",
+              "nota_visual": "Contador 0→41 con bloques cayendo en la agenda"
+            },
+            {
+              "texto_en_pantalla": "37 recordatorios enviados",
+              "nota_visual": "Contador 0→37 con notificaciones"
+            },
+            {
+              "texto_en_pantalla": "0 mensajes contestados por ti a medianoche",
+              "nota_visual": "El 0 grande, logo y reservum.cl"
+            }
+          ],
+          "caption": "Así se ve la semana de Halloween en un salón de ejemplo con Reservum: más de cien mensajes respondidos, decenas de horas agendadas y ningún mensaje contestado a medianoche.\n\nTodo eso mientras la dueña trabajaba.\n\nPrueba Reservum en reservum.cl.\n\n#halloweenchile #unaschile #esteticachile #agendaonline",
+          "portada_texto": "118 mensajes y tú no contestaste ninguno"
+        },
+        {
+          "id": "sab-post-2",
+          "tipo": "carrusel",
+          "hora_chile": "16:30",
+          "tema": "Checklist post-Halloween: 4 cosas para revisar el lunes",
+          "formato": "Carrusel 6 slides, listicle (IG5), objetivo guardados",
+          "slides_o_escenas": [
+            {
+              "texto_en_pantalla": "Pasó la semana más pedida del mes. 4 cosas para revisar el lunes.",
+              "nota_visual": "Portada con checklist. 'desliza →'"
+            },
+            {
+              "texto_en_pantalla": "1. ¿Quién no llegó? Escríbele con una hora nueva.",
+              "nota_visual": "Lista de nombres con un ícono de calendario"
+            },
+            {
+              "texto_en_pantalla": "2. ¿Quién vino por primera vez? Ese cliente vale el doble si vuelve.",
+              "nota_visual": "Estrella junto a 'nuevo'"
+            },
+            {
+              "texto_en_pantalla": "3. Pide reseña a las clientas felices de la semana.",
+              "nota_visual": "Estrellas"
+            },
+            {
+              "texto_en_pantalla": "4. Mira los huecos de noviembre y ofrécelos.",
+              "nota_visual": "Calendario de noviembre con espacios libres"
+            },
+            {
+              "texto_en_pantalla": "Reservum hace las cuatro sin que abras una planilla.",
+              "nota_visual": "Cierre con logo y reservum.cl"
+            }
+          ],
+          "caption": "Terminó la semana más pedida del mes y lo que hagas el lunes decide si esas clientas vuelven en noviembre.\n\nDesliza para ver las 4 cosas que conviene revisar.\n\nGuárdalo para el lunes.\n\n#emprendimientochile #pymeschile #unaschile #peluqueriachile"
+        },
+        {
+          "id": "sab-reel-2",
+          "tipo": "reel",
+          "hora_chile": "20:00",
+          "tema": "Pelo de disfraz de última hora: '¿tienes algo hoy?' a las 15:00",
+          "formato": "Reel 11 s, chat que se agenda solo",
+          "slides_o_escenas": [
+            {
+              "texto_en_pantalla": "Sábado 31, 15:02",
+              "nota_visual": "Hora grande en el mockup"
+            },
+            {
+              "texto_en_pantalla": "'¿Tienes algo hoy? Necesito el pelo verde para la fiesta 😅'",
+              "nota_visual": "Burbuja entrando"
+            },
+            {
+              "texto_en_pantalla": "Reservum: 'Queda una hora: 17:30. ¿Te la guardo?'",
+              "nota_visual": "Respuesta inmediata"
+            },
+            {
+              "texto_en_pantalla": "'¡Sí!' → Agendado ✓",
+              "nota_visual": "La última hora libre se pinta violeta"
+            },
+            {
+              "texto_en_pantalla": "La última hora también se vende.",
+              "nota_visual": "Cierre con logo, detalle sutil de calabaza"
+            }
+          ],
+          "caption": "Sábado 31, tres de la tarde, y alguien necesita el pelo verde para la fiesta de la noche.\n\nSi tu WhatsApp responde al tiro con la única hora que te queda, esa hora no se pierde.\n\nEtiqueta a tu colorista.\n\n#halloweenchile #peluqueriachile #colorista #pymeschile",
+          "portada_texto": "¿Tienes algo hoy? (15:02)"
+        }
+      ]
+    },
+    {
+      "fecha": "2026-11-01",
+      "dia": "dom",
+      "piezas": [
+        {
+          "id": "dom-post-1",
+          "tipo": "imagen",
+          "hora_chile": "09:30",
+          "tema": "Noviembre empieza hoy: 3 fechas que se vienen para tu agenda",
+          "formato": "Imagen sola, calendario de temporada, objetivo guardados",
+          "slides_o_escenas": [
+            {
+              "texto_en_pantalla": "Noviembre: 3 fechas para tu agenda · Licenciaturas y graduaciones · Black Friday 27–30 nov · Diciembre y Navidad se agendan desde ya",
+              "nota_visual": "Calendario de noviembre con tres marcas violetas y etiquetas mono"
+            }
+          ],
+          "caption": "Noviembre empieza hoy y trae tres momentos que llenan agendas: licenciaturas, Black Friday del 27 al 30 y las horas de diciembre que ya se empiezan a pedir.\n\nPrepárate antes de que lleguen los mensajes.\n\nGuárdalo como calendario del mes.\n\n#emprendimientochile #pymeschile #santiagochile #agendaonline"
+        },
+        {
+          "id": "dom-reel-1",
+          "tipo": "reel",
+          "hora_chile": "12:30",
+          "tema": "Black Friday para servicios: gift cards que se venden por WhatsApp",
+          "formato": "Reel 13 s, tipografía cinética + mockup de chat",
+          "slides_o_escenas": [
+            {
+              "texto_en_pantalla": "Black Friday no es solo para tiendas.",
+              "nota_visual": "Etiqueta mono 'BLACK FRIDAY · 27–30 NOV'"
+            },
+            {
+              "texto_en_pantalla": "'¿Tienen gift card para regalar?'",
+              "nota_visual": "Burbuja entrando"
+            },
+            {
+              "texto_en_pantalla": "Reservum: valores, servicios y cómo canjearla.",
+              "nota_visual": "Tarjeta de gift card con monto"
+            },
+            {
+              "texto_en_pantalla": "Pago hoy. Hora agendada en diciembre.",
+              "nota_visual": "Bloque en la agenda de diciembre"
+            },
+            {
+              "texto_en_pantalla": "Vende ahora, atiende después.",
+              "nota_visual": "Cierre con logo y reservum.cl"
+            }
+          ],
+          "caption": "El Black Friday de este año es del 27 al 30 de noviembre, y los negocios de servicios también pueden aprovecharlo con gift cards y packs.\n\nCon Reservum las consultas por gift card se responden solas y la hora queda lista para cuando la canjeen.\n\nGuárdalo para preparar tu oferta.\n\n#blackfridaychile #pymeschile #esteticachile #emprendedorachile",
+          "portada_texto": "Black Friday también es para servicios"
+        },
+        {
+          "id": "dom-post-2",
+          "tipo": "carrusel",
+          "hora_chile": "16:30",
+          "tema": "Clientes fundadores: preguntas frecuentes",
+          "formato": "Carrusel 6 slides, FAQ, objetivo seguidores/DM",
+          "slides_o_escenas": [
+            {
+              "texto_en_pantalla": "Clientes fundadores: las preguntas que más nos hacen",
+              "nota_visual": "Portada con '?' grande en violeta. 'desliza →'"
+            },
+            {
+              "texto_en_pantalla": "¿Qué gano? Primer mes a mitad de precio y 25% de descuento de por vida.",
+              "nota_visual": "Tarjeta con 50% y 25%"
+            },
+            {
+              "texto_en_pantalla": "¿Qué tengo que hacer? Usar Reservum y darnos un testimonio honesto.",
+              "nota_visual": "Ícono de comillas"
+            },
+            {
+              "texto_en_pantalla": "¿Sirve para mi rubro? Barberías, uñas, tatuajes, clínicas, veterinarias, gimnasios.",
+              "nota_visual": "Fila de íconos por rubro"
+            },
+            {
+              "texto_en_pantalla": "¿Cuántos cupos hay? 10 en total.",
+              "nota_visual": "Grilla de 10 casillas"
+            },
+            {
+              "texto_en_pantalla": "Escríbenos FUNDADOR por DM.",
+              "nota_visual": "Cierre con logo y reservum.cl"
+            }
+          ],
+          "caption": "Estas son las preguntas que más nos hacen sobre el programa de clientes fundadores, respondidas en corto.\n\nSon 10 cupos, con el primer mes a mitad de precio y 25% de descuento de por vida a cambio de tu testimonio.\n\nEscríbenos FUNDADOR por DM.\n\n#emprendimientochile #pymeschile #reservasonline #santiagochile"
+        },
+        {
+          "id": "dom-reel-2",
+          "tipo": "reel",
+          "hora_chile": "20:00",
+          "tema": "Diciembre se agenda en noviembre",
+          "formato": "Reel 12 s, conteo con calendario animado",
+          "slides_o_escenas": [
+            {
+              "texto_en_pantalla": "Diciembre se agenda en noviembre.",
+              "nota_visual": "Título grande, 'noviembre' subrayado en lila"
+            },
+            {
+              "texto_en_pantalla": "Horas de diciembre pedidas en noviembre:",
+              "nota_visual": "Calendario de diciembre vacío"
+            },
+            {
+              "texto_en_pantalla": "Semana 1: 4 · Semana 2: 11 · Semana 3: 19",
+              "nota_visual": "Bloques llenándose semana a semana (etiqueta 'ejemplo')"
+            },
+            {
+              "texto_en_pantalla": "Si no contestas hoy, esa hora la toma otro local.",
+              "nota_visual": "Burbuja en visto"
+            },
+            {
+              "texto_en_pantalla": "Tu agenda de fin de año se llena sola.",
+              "nota_visual": "Cierre con logo y reservum.cl"
+            }
+          ],
+          "caption": "Las horas para la semana de Navidad y Año Nuevo se empiezan a pedir en noviembre, mucho antes de que cuelgues el arbolito.\n\nReservum responde esas consultas apenas llegan y va llenando diciembre por ti.\n\nPrueba Reservum en reservum.cl.\n\n#navidadchile #peluqueriachile #barberiachile #pymeschile",
+          "portada_texto": "Diciembre se agenda en noviembre"
+        }
+      ]
+    }
+  ]
+}
