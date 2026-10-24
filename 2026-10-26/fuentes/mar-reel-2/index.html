@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="gsap.min.js"></script>
+    <style>
+@font-face{font-family:"Inter";src:url("fonts/Inter-Regular.otf");font-weight:400}
+@font-face{font-family:"Inter";src:url("fonts/Inter-SemiBold.otf");font-weight:600}
+@font-face{font-family:"Inter";src:url("fonts/Inter-Bold.otf");font-weight:700}
+@font-face{font-family:"Inter";src:url("fonts/Inter-ExtraBold.otf");font-weight:800}
+@font-face{font-family:"Inter";src:url("fonts/Inter-Black.otf");font-weight:900}
+@font-face{font-family:"DejaVu Sans Mono";src:url("fonts/DejaVuSansMono.ttf");font-weight:400}
+@font-face{font-family:"DejaVu Sans Mono";src:url("fonts/DejaVuSansMono-Bold.ttf");font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#ece8fd}
+#root{position:relative;width:100%;height:100%;overflow:hidden;font-family:"Inter",sans-serif;color:#1e1b4b}
+.bg{position:absolute;inset:0;background:linear-gradient(160deg,#ece8fd 0%,#e3e6fb 48%,#f6e6f1 100%)}
+.brand{position:absolute;left:80px;top:236px;display:flex;align-items:center;gap:18px;z-index:20}
+.brand .ico{width:68px;height:68px;border-radius:18px;background:#5b4ce6;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(91,76,230,.3)}
+.brand .ico svg{width:40px;height:40px}
+.brand .wm{font-weight:800;font-size:46px;letter-spacing:-0.03em;color:#1e1b4b}
+.brand .wm i{font-style:normal;color:#5b4ce6}
+.foot{position:absolute;left:80px;bottom:400px;font-family:"DejaVu Sans Mono",monospace;font-size:34px;color:#1e1b4b;opacity:.7;letter-spacing:.04em;z-index:20}
+.lbl{font-family:"DejaVu Sans Mono",monospace;font-weight:700;color:#6d28d9;letter-spacing:.16em;text-transform:uppercase;font-size:34px}
+.ttl{font-weight:900;letter-spacing:-0.045em;line-height:.98;color:#1e1b4b}
+.kw{color:#5b21b6}
+.hl{background-image:linear-gradient(#c4b5fd,#c4b5fd);background-repeat:no-repeat;background-position:0 88%;background-size:100% 30%;padding:0 6px}
+
+      .abs{position:absolute;left:80px;right:140px}
+      .pet{display:flex;gap:34px;align-items:center}
+      .pet .av{width:330px;height:330px;border-radius:60px;background:#fff;box-shadow:0 20px 50px rgba(30,27,75,.12);display:flex;align-items:center;justify-content:center;flex:none}
+      .pet .av svg{width:270px;height:270px}
+      .vcard{background:#fff;border-radius:34px;padding:28px 30px;box-shadow:0 20px 50px rgba(30,27,75,.12);border-left:12px solid #5b4ce6}
+      .vcard .k{font-family:"DejaVu Sans Mono",monospace;font-weight:700;color:#6d28d9;font-size:30px;letter-spacing:.12em}
+      .vcard .v{font-weight:900;font-size:64px;letter-spacing:-0.03em;margin-top:6px;line-height:1.05}
+      .vcard .d{font-family:"DejaVu Sans Mono",monospace;font-weight:700;font-size:34px;color:#ef4444;margin-top:12px}
+      .chat{background:#efeae2;border-radius:44px;padding:30px 28px;display:flex;flex-direction:column;gap:20px;box-shadow:0 24px 60px rgba(30,27,75,.12)}
+      .chat .top{display:flex;gap:16px;align-items:center;padding-bottom:14px;border-bottom:2px solid rgba(0,0,0,.08)}
+      .chat .top .a{width:70px;height:70px;border-radius:50%;background:#5b4ce6;display:flex;align-items:center;justify-content:center;flex:none}
+      .chat .top .a svg{width:40px;height:40px}
+      .chat .top b{font-size:38px;font-weight:800}
+      .chat .top span{display:block;font-family:"DejaVu Sans Mono",monospace;font-size:28px;color:#128c4a;font-weight:700}
+      .msg{max-width:88%;padding:22px 28px 14px;font-size:44px;font-weight:600;line-height:1.22;color:#111;box-shadow:0 4px 10px rgba(0,0,0,.06)}
+      .msg small{display:block;text-align:right;font-family:"DejaVu Sans Mono",monospace;font-size:28px;color:#4b5563;margin-top:4px;font-weight:400}
+      .out{align-self:flex-end;background:#d9fdd3;border-radius:30px 30px 8px 30px}
+      .in{align-self:flex-start;background:#fff;border-radius:30px 30px 30px 8px}
+      .chips{display:flex;gap:16px;flex-wrap:wrap;align-self:flex-end}
+      .chip{background:#fff;border:4px solid #5b4ce6;color:#5b21b6;font-weight:800;font-size:40px;padding:12px 26px;border-radius:999px}
+      .chip.f{background:#5b4ce6;color:#fff}
+      .slot{background:#5b4ce6;color:#fff;border-radius:34px;padding:30px 34px;box-shadow:0 20px 44px rgba(91,76,230,.35)}
+      .slot .k{font-family:"DejaVu Sans Mono",monospace;font-weight:700;font-size:34px;letter-spacing:.1em;opacity:.9}
+      .slot .v{font-weight:900;font-size:76px;letter-spacing:-0.03em;margin-top:6px}
+      .slot .s{font-size:40px;font-weight:600;margin-top:4px;opacity:.95}
+      .ghost{background:rgba(255,255,255,.6);border-radius:28px;height:110px;margin-top:18px}
+      .notif{display:flex;gap:22px;align-items:center;background:#fff;border-radius:34px;padding:24px 28px;box-shadow:0 18px 40px rgba(30,27,75,.15)}
+      .notif .ic{width:76px;height:76px;border-radius:22px;background:#5b4ce6;flex:none;display:flex;align-items:center;justify-content:center}
+      .notif .ic svg{width:46px;height:46px}
+      .notif .h{font-family:"DejaVu Sans Mono",monospace;font-size:28px;color:#6b7280;font-weight:700}
+      .notif .b{font-size:40px;font-weight:800;color:#111;line-height:1.15;margin-top:4px}
+      .cta{display:inline-flex;align-items:center;background:#5b4ce6;color:#fff;font-weight:800;font-size:58px;padding:28px 50px;border-radius:999px;box-shadow:0 18px 40px rgba(91,76,230,.35)}
+      .bigbrand{display:flex;align-items:center;gap:26px}
+      .bigbrand .ico{width:110px;height:110px;border-radius:30px;background:#5b4ce6;display:flex;align-items:center;justify-content:center;box-shadow:0 16px 34px rgba(91,76,230,.35)}
+      .bigbrand .ico svg{width:66px;height:66px}
+      .bigbrand .wm{font-weight:900;font-size:100px;letter-spacing:-0.04em}
+      .bigbrand .wm i{font-style:normal;color:#5b4ce6}
+      .paw{position:absolute;opacity:.12}
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="14" data-width="1080" data-height="1920">
+      <div class="bg"></div>
+      <svg class="paw" style="left:820px;top:1560px;width:150px;transform:rotate(18deg)" viewBox="0 0 100 100" fill="#5b4ce6"><ellipse cx="50" cy="66" rx="24" ry="20"/><circle cx="22" cy="40" r="10"/><circle cx="40" cy="24" r="10"/><circle cx="60" cy="24" r="10"/><circle cx="78" cy="40" r="10"/></svg>
+      <div class="brand"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><div class="wm">Reservum<i>.</i></div></div>
+
+      <section id="s1" class="clip" data-start="0" data-duration="2.7" data-track-index="1" style="position:absolute;inset:0">
+        <div class="lbl abs" style="top:400px" id="s1l">Veterinaria · control anual</div>
+        <div class="ttl abs" style="top:460px;font-size:116px" id="s1t">A Luna le toca su <span class="kw hl">vacuna anual.</span></div>
+        <div class="abs pet" style="top:860px" id="pet">
+          <div class="av" id="av"><svg viewBox="0 0 200 200">
+            <ellipse cx="52" cy="78" rx="26" ry="48" fill="#92400e" transform="rotate(18 52 78)"/>
+            <ellipse cx="148" cy="78" rx="26" ry="48" fill="#92400e" transform="rotate(-18 148 78)"/>
+            <ellipse cx="100" cy="104" rx="62" ry="66" fill="#f59e0b"/>
+            <ellipse cx="100" cy="138" rx="38" ry="30" fill="#fde68a"/>
+            <circle cx="76" cy="96" r="9" fill="#1e1b4b"/><circle cx="124" cy="96" r="9" fill="#1e1b4b"/>
+            <circle cx="79" cy="93" r="3" fill="#fff"/><circle cx="127" cy="93" r="3" fill="#fff"/>
+            <ellipse cx="100" cy="124" rx="14" ry="10" fill="#1e1b4b"/>
+            <path d="M88 142 Q100 152 112 142" stroke="#1e1b4b" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <ellipse cx="100" cy="158" rx="9" ry="10" fill="#f472b6" id="tg"/>
+          </svg></div>
+          <div class="vcard" id="vc" style="flex:1"><div class="k">LUNA · 4 AÑOS</div><div class="v">Vacuna anual</div><div class="d">vence 30/10</div></div>
+        </div>
+      </section>
+
+      <section id="s2" class="clip" data-start="2.7" data-duration="2.8" data-track-index="1" style="position:absolute;inset:0">
+        <div class="ttl abs" style="top:400px;font-size:96px" id="s2t">Reservum le escribe a <span class="kw hl">su dueña.</span></div>
+        <div class="abs chat" style="top:720px" id="ch2">
+          <div class="top"><div class="a"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><div><b>Clínica Veterinaria</b><span>en línea</span></div></div>
+          <div class="msg out" id="m1">Hola Carla, a Luna le toca su vacuna. ¿Te acomoda el martes 10:00 o el jueves 17:30?<small>10:02 ✓✓</small></div>
+          <div class="chips" id="cp"><div class="chip">Martes 10:00</div><div class="chip" id="cj">Jueves 17:30</div></div>
+        </div>
+      </section>
+
+      <section id="s3" class="clip" data-start="5.5" data-duration="2.3" data-track-index="1" style="position:absolute;inset:0">
+        <div class="lbl abs" style="top:400px" id="s3l">Carla responde</div>
+        <div class="abs chat" style="top:470px" id="ch3">
+          <div class="msg out" style="opacity:.55">¿Te acomoda el martes 10:00 o el jueves 17:30?<small>10:02 ✓✓</small></div>
+          <div class="msg in" id="m2" style="font-size:96px;font-weight:900;letter-spacing:-0.03em">“El jueves”<small>10:04</small></div>
+        </div>
+        <div class="ttl abs" style="top:1120px;font-size:80px" id="s3t">Sin llamadas. <span class="kw hl">Sin esperar.</span></div>
+      </section>
+
+      <section id="s4" class="clip" data-start="7.8" data-duration="2.6" data-track-index="1" style="position:absolute;inset:0">
+        <div class="ttl abs" style="top:400px;font-size:120px" id="s4t">Agendado <span class="kw hl">✓</span></div>
+        <div class="abs" style="top:600px" id="ag">
+          <div class="slot" id="sl"><div class="k">JUE 29 OCT · 17:30</div><div class="v">Luna · vacuna</div><div class="s">Carla · control anual</div></div>
+          <div class="ghost"></div>
+        </div>
+        <div class="abs notif" style="top:1090px" id="nt"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><div><div class="h">Programado · mié 28 · 17:30</div><div class="b">Recordatorio el día antes</div></div></div>
+      </section>
+
+      <section id="s5" class="clip" data-start="10.4" data-duration="3.6" data-track-index="1" style="position:absolute;inset:0">
+        <div class="ttl abs" style="top:400px;font-size:112px" id="s5a">Ningún paciente se queda sin <span class="kw hl">su vacuna.</span></div>
+        <div class="abs bigbrand" style="top:1000px" id="s5b"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><div class="wm">Reservum<i>.</i></div></div>
+        <div class="abs" style="top:1170px" id="s5c"><span class="cta">reservum.cl</span></div>
+      </section>
+
+      <div class="foot" id="foot">reservum.cl</div>
+      <audio id="bed" src="audio.wav" data-start="0" data-duration="14" data-track-index="5" data-volume="0.9"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const hl=(s,t)=>tl.fromTo(s,{backgroundSize:"0% 30%"},{backgroundSize:"100% 30%",duration:0.4},t);
+      const up=(s,t,d=0.4)=>tl.fromTo(s,{opacity:0,y:50},{opacity:1,y:0,duration:d,ease:"power3.out"},t);
+      // S1
+      tl.fromTo("#s1l",{opacity:0},{opacity:1,duration:0.25},0);
+      up("#s1t",0.02,0.35);
+      hl("#s1t .hl",0.4);
+      tl.fromTo("#av",{opacity:0,scale:0.5,rotation:-10},{opacity:1,scale:1,rotation:0,duration:0.5,ease:"back.out(2)"},0.2);
+      tl.fromTo("#vc",{opacity:0,x:80},{opacity:1,x:0,duration:0.4,ease:"power3.out"},0.6);
+      tl.to("#av",{rotation:4,duration:0.15,yoyo:true,repeat:5,ease:"sine.inOut"},1.2);
+      // S2
+      up("#s2t",2.72,0.35);
+      hl("#s2t .hl",3.0);
+      tl.fromTo("#ch2",{opacity:0,y:80},{opacity:1,y:0,duration:0.4,ease:"power3.out"},2.8);
+      tl.fromTo("#m1",{opacity:0,scale:0.85,transformOrigin:"100% 100%"},{opacity:1,scale:1,duration:0.35,ease:"back.out(2)"},3.25);
+      tl.fromTo("#cp .chip",{opacity:0,y:30},{opacity:1,y:0,duration:0.25,stagger:0.12},3.9);
+      // S3
+      tl.fromTo("#s3l",{opacity:0},{opacity:1,duration:0.25},5.5);
+      tl.fromTo("#ch3",{opacity:0},{opacity:1,duration:0.2},5.5);
+      tl.fromTo("#m2",{opacity:0,scale:0.6,transformOrigin:"0% 100%"},{opacity:1,scale:1,duration:0.4,ease:"back.out(2.4)"},5.75);
+      up("#s3t",6.3,0.35);
+      hl("#s3t .hl",6.6);
+      // S4
+      up("#s4t",7.82,0.35);
+      hl("#s4t .hl",8.1);
+      tl.fromTo("#sl",{opacity:0,scaleY:0.2,transformOrigin:"50% 0%"},{opacity:1,scaleY:1,duration:0.4,ease:"back.out(1.6)"},8.0);
+      tl.fromTo("#nt",{opacity:0,y:-50,scale:0.9},{opacity:1,y:0,scale:1,duration:0.35,ease:"back.out(2)"},8.8);
+      // S5
+      up("#s5a",10.42,0.35);
+      hl("#s5a .hl",10.75);
+      tl.fromTo("#s5b",{opacity:0,scale:0.8,transformOrigin:"0% 50%"},{opacity:1,scale:1,duration:0.35,ease:"back.out(2)"},10.7);
+      tl.fromTo("#s5c",{opacity:0,y:30},{opacity:1,y:0,duration:0.3,ease:"power3.out"},10.9);
+      tl.to("#foot",{opacity:0,duration:0.2},10.4);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
