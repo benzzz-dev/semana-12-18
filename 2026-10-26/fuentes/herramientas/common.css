@@ -1,0 +1,40 @@
+/*BRAND*/
+      .abs{position:absolute;left:80px;right:140px}
+      .pet{display:flex;gap:34px;align-items:center}
+      .pet .av{width:330px;height:330px;border-radius:60px;background:#fff;box-shadow:0 20px 50px rgba(30,27,75,.12);display:flex;align-items:center;justify-content:center;flex:none}
+      .pet .av svg{width:270px;height:270px}
+      .vcard{background:#fff;border-radius:34px;padding:28px 30px;box-shadow:0 20px 50px rgba(30,27,75,.12);border-left:12px solid #5b4ce6}
+      .vcard .k{font-family:"DejaVu Sans Mono",monospace;font-weight:700;color:#6d28d9;font-size:30px;letter-spacing:.12em}
+      .vcard .v{font-weight:900;font-size:64px;letter-spacing:-0.03em;margin-top:6px;line-height:1.05}
+      .vcard .d{font-family:"DejaVu Sans Mono",monospace;font-weight:700;font-size:34px;color:#ef4444;margin-top:12px}
+      .chat{background:#efeae2;border-radius:44px;padding:30px 28px;display:flex;flex-direction:column;gap:20px;box-shadow:0 24px 60px rgba(30,27,75,.12)}
+      .chat .top{display:flex;gap:16px;align-items:center;padding-bottom:14px;border-bottom:2px solid rgba(0,0,0,.08)}
+      .chat .top .a{width:70px;height:70px;border-radius:50%;background:#5b4ce6;display:flex;align-items:center;justify-content:center;flex:none}
+      .chat .top .a svg{width:40px;height:40px}
+      .chat .top b{font-size:38px;font-weight:800}
+      .chat .top span{display:block;font-family:"DejaVu Sans Mono",monospace;font-size:28px;color:#128c4a;font-weight:700}
+      .msg{max-width:88%;padding:22px 28px 14px;font-size:44px;font-weight:600;line-height:1.22;color:#111;box-shadow:0 4px 10px rgba(0,0,0,.06)}
+      .msg small{display:block;text-align:right;font-family:"DejaVu Sans Mono",monospace;font-size:28px;color:#4b5563;margin-top:4px;font-weight:400}
+      .out{align-self:flex-end;background:#d9fdd3;border-radius:30px 30px 8px 30px}
+      .in{align-self:flex-start;background:#fff;border-radius:30px 30px 30px 8px}
+      .chips{display:flex;gap:16px;flex-wrap:wrap;align-self:flex-end}
+      .chip{background:#fff;border:4px solid #5b4ce6;color:#5b21b6;font-weight:800;font-size:40px;padding:12px 26px;border-radius:999px}
+      .chip.f{background:#5b4ce6;color:#fff}
+      .slot{background:#5b4ce6;color:#fff;border-radius:34px;padding:30px 34px;box-shadow:0 20px 44px rgba(91,76,230,.35)}
+      .slot .k{font-family:"DejaVu Sans Mono",monospace;font-weight:700;font-size:34px;letter-spacing:.1em;opacity:.9}
+      .slot .v{font-weight:900;font-size:76px;letter-spacing:-0.03em;margin-top:6px}
+      .slot .s{font-size:40px;font-weight:600;margin-top:4px;opacity:.95}
+      .ghost{background:rgba(255,255,255,.6);border-radius:28px;height:110px;margin-top:18px}
+      .notif{display:flex;gap:22px;align-items:center;background:#fff;border-radius:34px;padding:24px 28px;box-shadow:0 18px 40px rgba(30,27,75,.15)}
+      .notif .ic{width:76px;height:76px;border-radius:22px;background:#5b4ce6;flex:none;display:flex;align-items:center;justify-content:center}
+      .notif .ic svg{width:46px;height:46px}
+      .notif .h{font-family:"DejaVu Sans Mono",monospace;font-size:28px;color:#6b7280;font-weight:700}
+      .notif .b{font-size:40px;font-weight:800;color:#111;line-height:1.15;margin-top:4px}
+      .cta{display:inline-flex;align-items:center;background:#5b4ce6;color:#fff;font-weight:800;font-size:58px;padding:28px 50px;border-radius:999px;box-shadow:0 18px 40px rgba(91,76,230,.35)}
+      .bigbrand{display:flex;align-items:center;gap:26px}
+      .bigbrand .ico{width:110px;height:110px;border-radius:30px;background:#5b4ce6;display:flex;align-items:center;justify-content:center;box-shadow:0 16px 34px rgba(91,76,230,.35)}
+      .bigbrand .ico svg{width:66px;height:66px}
+      .bigbrand .wm{font-weight:900;font-size:100px;letter-spacing:-0.04em}
+      .bigbrand .wm i{font-style:normal;color:#5b4ce6}
+      .paw{position:absolute;opacity:.12}
+    
