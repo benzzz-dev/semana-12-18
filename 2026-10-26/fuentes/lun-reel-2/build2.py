@@ -1,0 +1,4 @@
+import sys
+sk='<svg viewBox="0 0 100 110" width="78%" height="78%"><ellipse cx="50" cy="52" rx="40" ry="48" fill="#f8fafc"/><path d="M14 30Q50 -6 86 30L86 22Q50 -12 14 22Z" fill="#1e1b4b"/><ellipse cx="34" cy="50" rx="13" ry="14" fill="#111827"/><ellipse cx="66" cy="50" rx="13" ry="14" fill="#111827"/><circle cx="34" cy="50" r="3" fill="#a78bfa"/><circle cx="66" cy="50" r="3" fill="#a78bfa"/><path d="M50 62l-6 10h12z" fill="#111827"/><path d="M28 84Q50 92 72 84" stroke="#111827" stroke-width="3" fill="none"/><path d="M33 79v11M41 81v12M50 82v12M59 81v12M67 79v11" stroke="#111827" stroke-width="2.4"/><path d="M20 40l-6-4M80 40l6-4" stroke="#7c3aed" stroke-width="3"/></svg>'
+s=open('index.html').read().replace('/*SKULL*/',sk).replace('/*THUMBS*/',''.join(f'<div class="th"><div>{sk}</div></div>' for _ in range(14)))
+open('index.html','w').write(s)
