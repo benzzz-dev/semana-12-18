@@ -1,0 +1,77 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><style>@font-face{font-family:"Inter";src:url("fonts/Inter-Regular.otf");font-weight:400}
+@font-face{font-family:"Inter";src:url("fonts/Inter-SemiBold.otf");font-weight:600}
+@font-face{font-family:"Inter";src:url("fonts/Inter-Bold.otf");font-weight:700}
+@font-face{font-family:"Inter";src:url("fonts/Inter-ExtraBold.otf");font-weight:800}
+@font-face{font-family:"Inter";src:url("fonts/Inter-Black.otf");font-weight:900}
+@font-face{font-family:"DejaVu Sans Mono";src:url("fonts/DejaVuSansMono.ttf");font-weight:400}
+@font-face{font-family:"DejaVu Sans Mono";src:url("fonts/DejaVuSansMono-Bold.ttf");font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#ece8fd}
+#root{position:relative;width:100%;height:100%;overflow:hidden;font-family:"Inter",sans-serif;color:#1e1b4b}
+.bg{position:absolute;inset:0;background:linear-gradient(160deg,#ece8fd 0%,#e3e6fb 48%,#f6e6f1 100%)}
+.brand{position:absolute;left:80px;top:236px;display:flex;align-items:center;gap:18px;z-index:20}
+.brand .ico{width:68px;height:68px;border-radius:18px;background:#5b4ce6;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(91,76,230,.3)}
+.brand .ico svg{width:40px;height:40px}
+.brand .wm{font-weight:800;font-size:46px;letter-spacing:-0.03em;color:#1e1b4b}
+.brand .wm i{font-style:normal;color:#5b4ce6}
+.foot{position:absolute;left:80px;bottom:400px;font-family:"DejaVu Sans Mono",monospace;font-size:34px;color:#1e1b4b;opacity:.7;letter-spacing:.04em;z-index:20}
+.lbl{font-family:"DejaVu Sans Mono",monospace;font-weight:700;color:#6d28d9;letter-spacing:.16em;text-transform:uppercase;font-size:34px}
+.ttl{font-weight:900;letter-spacing:-0.045em;line-height:.98;color:#1e1b4b}
+.kw{color:#5b21b6}
+.hl{background-image:linear-gradient(#c4b5fd,#c4b5fd);background-repeat:no-repeat;background-position:0 88%;background-size:100% 30%;padding:0 6px}
+
+html,body{height:1350px}
+.brand{top:70px}
+.foot{bottom:64px;font-size:30px}
+.counter{position:absolute;right:80px;top:88px;font-family:"DejaVu Sans Mono",monospace;font-weight:700;color:#6d28d9;font-size:32px;letter-spacing:.08em}
+.swipe{position:absolute;right:80px;bottom:60px;font-family:"DejaVu Sans Mono",monospace;font-weight:700;color:#6d28d9;font-size:34px}
+.lbl.t{position:absolute;left:80px;top:200px;font-size:30px}
+.q{position:absolute;left:80px;right:80px;top:255px;font-size:92px}
+.chat{position:absolute;left:80px;right:80px;top:560px;background:#efeae2;border-radius:44px;padding:34px 30px;display:flex;flex-direction:column;gap:20px;box-shadow:0 24px 60px rgba(30,27,75,.12)}
+.msg{max-width:82%;padding:20px 28px 14px;font-size:38px;font-weight:600;line-height:1.2;color:#111;box-shadow:0 4px 10px rgba(0,0,0,.06)}
+.msg small{display:block;text-align:right;font-family:"DejaVu Sans Mono",monospace;font-size:22px;color:#667;margin-top:4px;font-weight:400}
+.in{align-self:flex-start;background:#fff;border-radius:30px 30px 30px 8px}
+.out{align-self:flex-end;background:#d9fdd3;border-radius:30px 30px 8px 30px}
+.chips{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+.chip{background:#fff;border:3px solid #5b4ce6;color:#5b21b6;font-weight:800;font-size:32px;padding:10px 22px;border-radius:999px}
+.chip.f{background:#5b4ce6;color:#fff}
+.pl{display:flex;justify-content:space-between;gap:30px;font-size:36px;padding:6px 0;border-bottom:2px dashed rgba(0,0,0,.12)}
+.pl:last-of-type{border-bottom:0}
+.map{height:170px;border-radius:20px;margin-top:12px;position:relative;overflow:hidden;background:#e5e7eb;background-image:linear-gradient(90deg,rgba(255,255,255,.9) 14px,transparent 14px),linear-gradient(rgba(255,255,255,.9) 14px,transparent 14px);background-size:120px 120px,90px 90px;background-position:40px 0,0 30px}
+.pin{position:absolute;left:46%;top:24%;width:60px;height:60px;border-radius:50% 50% 50% 0;background:#e11d48;transform:rotate(-45deg)}
+.pin::after{content:"";position:absolute;left:19px;top:19px;width:22px;height:22px;border-radius:50%;background:#fff}
+.lnk{color:#2563eb;font-family:"DejaVu Sans Mono",monospace;font-size:28px;font-weight:700}
+.auto{position:absolute;left:80px;bottom:130px;font-family:"DejaVu Sans Mono",monospace;font-weight:700;font-size:28px;color:#6d28d9;letter-spacing:.1em}
+
+.big{position:absolute;left:80px;right:80px;top:260px;font-weight:900;letter-spacing:-0.045em;line-height:1.0;color:#1e1b4b;font-size:96px}
+.sub{position:absolute;left:80px;right:80px;font-size:46px;font-weight:700;line-height:1.25;color:#374151}
+.pk{position:absolute;opacity:.16}
+.cal{position:absolute;width:430px;height:400px}
+.num{position:absolute;left:80px;top:220px;font-weight:900;font-size:200px;letter-spacing:-0.06em;line-height:.85;color:#c4b5fd}
+.q2{position:absolute;left:80px;right:80px;top:420px;font-size:84px}
+.card{position:absolute;left:80px;right:80px;background:#fff;border-radius:40px;padding:34px 36px;box-shadow:0 24px 60px rgba(30,27,75,.12);display:flex;flex-direction:column;gap:18px}
+.card .k{font-family:"DejaVu Sans Mono",monospace;font-weight:700;color:#6d28d9;font-size:28px;letter-spacing:.12em}
+.li{display:flex;align-items:center;gap:22px;font-size:42px;font-weight:700}
+.li .av{flex:none;width:72px;height:72px;border-radius:50%;background:#ddd6fe;color:#5b21b6;font-weight:900;font-size:34px;display:flex;align-items:center;justify-content:center}
+.li .t{flex:1}
+.li .tg{font-family:"DejaVu Sans Mono",monospace;font-weight:700;font-size:26px;padding:8px 14px;border-radius:12px}
+.tg.r{background:#fee2e2;color:#b91c1c}.tg.v{background:#5b4ce6;color:#fff}.tg.y{background:#fef3c7;color:#92400e}
+.stars{display:flex;gap:10px}.stars svg{width:60px;height:60px;fill:#5b4ce6}
+.mgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:10px}
+.mgrid b{font-family:"DejaVu Sans Mono",monospace;font-size:24px;color:#6d28d9;text-align:center}
+.mgrid i{height:52px;border-radius:14px;background:#ddd6fe;font-style:normal;font-weight:800;font-size:28px;color:#4c1d95;display:flex;align-items:flex-start;justify-content:flex-start;padding:6px 10px}
+.mgrid i.o{background:#fff;border:3px dashed #a78bfa;color:#6d28d9}
+.mgrid i.x{background:transparent}
+.endl{position:absolute;left:80px;right:80px;top:250px;font-size:92px}
+.list{position:absolute;left:80px;right:80px;top:700px;display:flex;flex-direction:column;gap:22px}
+.list div{display:flex;align-items:center;gap:22px;font-size:44px;font-weight:800}
+.list i{flex:none;width:62px;height:62px;border-radius:18px;background:#5b4ce6;display:flex;align-items:center;justify-content:center}
+.list i svg{width:38px;height:38px}
+.chk{position:absolute;left:80px;right:80px;top:720px;display:flex;flex-direction:column;gap:22px}
+.chk div{display:flex;align-items:center;gap:24px;background:#fff;border-radius:28px;padding:24px 28px;font-size:42px;font-weight:800;box-shadow:0 12px 30px rgba(30,27,75,.08)}
+.chk i{flex:none;width:58px;height:58px;border-radius:16px;border:5px solid #5b4ce6}
+</style></head><body><div id="root"><div class="bg"></div><div class="brand"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><div class="wm">Reservum<i>.</i></div></div><div class="counter">3/6</div><div class="num">2</div>
+<div class="ttl q2">¿Quién vino por primera vez? <span class="kw hl" style="white-space:nowrap">Vale el doble</span> si vuelve.</div>
+<div class="card" style="top:880px"><div class="k">CLIENTAS NUEVAS</div>
+<div class="li"><div class="av">AV</div><div class="t">Antonia V.</div><div class="tg y">★ NUEVA</div></div>
+<div class="li"><div class="av">FL</div><div class="t">Fernanda L.</div><div class="tg y">★ NUEVA</div></div></div><div class="foot">reservum.cl</div></div></body></html>
